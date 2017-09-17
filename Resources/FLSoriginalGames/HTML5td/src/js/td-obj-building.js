@@ -15,34 +15,34 @@
 // _TD.a.push begin
 _TD.a.push(function (TD) {
 
-	// building 对象的属性、方法。注意属性中不要有数组、对象等
-	// 引用属性，否则多个实例的相关属性会发生冲突
+	// The properties and methods of the building object. Note that there are no arrays, objects, etc. in the attribute
+	// Reference property, or the related properties of multiple instances conflict
 	var building_obj = {
 		_init: function (cfg) {
 			this.is_selected = false;
 			this.level = 0;
-			this.killed = 0; // 当前建筑杀死了多少怪物
+			this.killed = 0; // How many monsters are killed by the current building?
 			this.target = null;
 
 			cfg = cfg || {};
 			this.map = cfg.map || null;
-			this.grid = cfg.grid || null;
+			this.grid = cfg.grid || null;炮台
 
 			/**
-			 * 子弹类型，可以有以下类型：
-			 *         1：普通子弹
-			 *         2：激光类，发射后马上命中，暂未实现
-			 *         3：导弹类，击中后会爆炸，带来面攻击，暂未实现
+			 * Bullet types, you can have the following types:
+			 * 1: Ordinary bullets
+			 * 2: Laser type, hit immediately after launch, not realized
+			 * 3: Missile class, hit will explode, bring face attack, temporarily not realized
 			 */
 			this.bullet_type = cfg.bullet_type || 1;
 
 			/**
-			 * type 可能的值有：
-			 *         "wall": 墙壁，没有攻击性
-			 *         "cannon": 炮台
-			 *         "LMG": 轻机枪
-			 *         "HMG": 重机枪
-			 *         "laser_gun": 激光枪
+			 * type Possible values are:
+			 *         "wall": Wall, no aggressiveness
+			 *         "cannon": Fort
+			 *         "LMG": Guns
+			 *         "HMG": Heavy machine guns
+			 *         "laser_gun": Laser gun
 			 *
 			 */
 			this.type = cfg.type;
@@ -52,32 +52,32 @@ _TD.a.push(function (TD) {
 			this.is_pre_building = !!cfg.is_pre_building;
 			this.blink = this.is_pre_building;
 			this.wait_blink = this._default_wait_blink = 20;
-			this.is_weapon = (this.type != "wall"); // 墙等不可攻击的建筑此项为 false ，其余武器此项为 true
+			this.is_weapon = (this.type != "wall"); // Walls and other non-attack buildings this is false and the remaining weapons are true
 
 			var o = TD.getDefaultBuildingAttributes(this.type);
 			TD.lang.mix(this, o);
 			this.range_px = this.range * TD.grid_size;
-			this.money = this.cost; // 购买、升级本建筑已花费的钱
+			this.money = this.cost; // Purchase and upgrade the cost of the building
 
 			this.caculatePos();
 		},
 
 		/**
-		 * 升级本建筑需要的花费
+		 * Cost of upgrading the building
 		 */
 		getUpgradeCost: function () {
 			return Math.floor(this.money * 0.75);
 		},
 
 		/**
-		 * 出售本建筑能得到多少钱
+		 * How much does it cost to sell the building?
 		 */
 		getSellMoney: function () {
 			return Math.floor(this.money * 0.5) || 1;
 		},
 
 		/**
-		 * 切换选中 / 未选中状态
+		 * Toggle Checked/Unchecked
 		 */
 		toggleSelected: function () {
 			this.is_selected = !this.is_selected;
@@ -85,12 +85,12 @@ _TD.a.push(function (TD) {
 			var _this = this;
 
 			if (this.is_selected) {
-				// 如果当前建筑被选中
+				// If the current building is selected
 
 				this.map.eachBuilding(function (obj) {
 					obj.is_selected = obj == _this;
 				});
-				// 取消另一个地图中选中建筑的选中状态
+				// Cancel the selected state of the selected building in another map
 				(
 					this.map.is_main_map ? this.scene.panel_map : this.scene.map
 				).eachBuilding(function (obj) {
@@ -100,26 +100,26 @@ _TD.a.push(function (TD) {
 				this.map.selected_building = this;
 
 				if (!this.map.is_main_map) {
-					// 在面版地图中选中了建筑，进入建筑模式
+					// In the face map, the architecture is selected and the building mode is entered.
 					this.scene.map.preBuild(this.type);
 				} else {
-					// 取消建筑模式
+					// Cancel Building Mode
 					this.scene.map.cancelPreBuild();
 				}
 
 			} else {
-				// 如果当前建筑切换为未选中状态
+				// If the current building is switched to unchecked
 
 				if (this.map.selected_building == this)
 					this.map.selected_building = null;
 
 				if (!this.map.is_main_map) {
-					// 取消建筑模式
+					// Cancel Building Mode
 					this.scene.map.cancelPreBuild();
 				}
 			}
 
-			// 如果是选中 / 取消选中主地图上的建筑，显示 / 隐藏对应的操作按钮
+			// If you select/uncheck the building on the main map, show/hide the corresponding action button
 			if (this.map.is_main_map) {
 				if (this.map.selected_building) {
 					this.scene.panel.btn_upgrade.show();
@@ -133,7 +133,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 生成、更新升级按钮的说明文字
+		 * Generate and update the description text for the upgrade button
 		 */
 		updateBtnDesc: function () {
 			this.scene.panel.btn_upgrade.desc = TD._t(
@@ -150,8 +150,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 将本建筑放置到一个格子中
-		 * @param grid {Element} 指定格子
+		 * Put the building into a lattice
+		 * @param grid {Element} Designated lattice
 		 */
 		locate: function (grid) {
 			this.grid = grid;
@@ -175,7 +175,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 将本建筑彻底删除
+		 * Remove the building completely
 		 */
 		remove: function () {
 //			TD.log("remove building #" + this.id + ".");
@@ -186,7 +186,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 寻找一个目标（怪物）
+		 * Looking for a target (monster)
 		 */
 		findTaget: function () {
 			if (!this.is_weapon || this.is_pre_building || !this.grid) return;
@@ -194,25 +194,25 @@ _TD.a.push(function (TD) {
 			var cx = this.cx, cy = this.cy,
 				range2 = Math.pow(this.range_px, 2);
 
-			// 如果当前建筑有目标，并且目标还是有效的，并且目标仍在射程内
+			// If the current building has a goal, and the target is still valid, and the target is still within range
 			if (this.target && this.target.is_valid &&
 				Math.pow(this.target.cx - cx, 2) + Math.pow(this.target.cy - cy, 2) <= range2)
 				return;
 
-			// 在进入射程的怪物中寻找新的目标
+			// Looking for new targets in the range of monsters.
 			this.target = TD.lang.any(
-				TD.lang.rndSort(this.map.monsters), // 将怪物随机排序
+				TD.lang.rndSort(this.map.monsters), // Randomly sort the monsters
 				function (obj) {
 					return Math.pow(obj.cx - cx, 2) + Math.pow(obj.cy - cy, 2) <= range2;
 				});
 		},
 
 		/**
-		 * 取得目标的坐标（相对于地图左上角）
+		 * Gets the coordinates of the target (relative to the upper-left corner of the map)
 		 */
 		getTargetPosition: function () {
 			if (!this.target) {
-				// 以 entrance 为目标
+				// To entrance As a target
 				var grid = this.map.is_main_map ? this.map.entrance : this.grid;
 				return [grid.cx, grid.cy];
 			}
@@ -220,18 +220,18 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 向自己的目标开火
+		 * Fire on your target.
 		 */
 		fire: function () {
 			if (!this.target || !this.target.is_valid) return;
 
 			if (this.type == "laser_gun") {
-				// 如果是激光枪，目标立刻被击中
+				// If it's a laser gun, the target is hit right away.
 				this.target.beHit(this, this.damage);
 				return;
 			}
 
-			var muzzle = this.muzzle || [this.cx, this.cy], // 炮口的位置
+			var muzzle = this.muzzle || [this.cx, this.cy], // The position of the muzzle
 				cx = muzzle[0],
 				cy = muzzle[1];
 
@@ -276,14 +276,14 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 升级建筑
+		 * Upgrade Building
 		 */
 		upgrade: function () {
 			if (!this._upgrade_records)
 				this._upgrade_records = {};
 
 			var attrs = [
-				// 可升级的变量
+				// Upgradeable variables
 				"damage", "range", "speed", "life", "shield"
 			], i, l = attrs.length;
 			for (i = 0; i < l; i++)
@@ -351,7 +351,7 @@ _TD.a.push(function (TD) {
 				) &&
 				this.is_weapon && this.range > 0 && this.grid
 			) {
-				// 画射程
+				// Draw Range
 				ctx.lineWidth = _TD.retina;
 				ctx.fillStyle = "rgba(187, 141, 32, 0.15)";
 				ctx.strokeStyle = "#bb8d20";
@@ -363,7 +363,7 @@ _TD.a.push(function (TD) {
 			}
 
 			if (this.type == "laser_gun" && this.target && this.target.is_valid) {
-				// 画激光
+				// Painting laser
 				ctx.lineWidth = 3 * _TD.retina;
 				ctx.strokeStyle = "rgba(50, 50, 200, 0.5)";
 				ctx.beginPath();
@@ -407,10 +407,10 @@ _TD.a.push(function (TD) {
 
 	/**
 	 * @param id {String}
-	 * @param cfg {object} 配置对象
-	 *         至少需要包含以下项：
+	 * @param cfg {object} Configuration Object
+	 *         At a minimum, you need to include the following:
 	 *         {
-	 *			 type: 建筑类型，可选的值有
+	 *			 type: Building type, optional values have
 	 *				 "wall"
 	 *				 "cannon"
 	 *				 "LMG"
@@ -428,8 +428,8 @@ _TD.a.push(function (TD) {
 	};
 
 
-	// bullet 对象的属性、方法。注意属性中不要有数组、对象等
-	// 引用属性，否则多个实例的相关属性会发生冲突
+	// bullet The properties and methods of the object. Note that there are no arrays, objects, etc. in the attribute
+	// Reference property, or the related properties of multiple instances conflict
 	var bullet_obj = {
 		_init: function (cfg) {
 			cfg = cfg || {};
@@ -457,7 +457,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 计算子弹的一些数值
+		 * Calculate the number of bullets
 		 */
 		caculate: function () {
 			var sx, sy, c,
@@ -473,7 +473,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 检查当前子弹是否已超出地图范围
+		 * Check if the current bullet is out of the map range
 		 */
 		checkOutOfMap: function () {
 			this.is_valid = !(
@@ -487,7 +487,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 检查当前子弹是否击中了怪物
+		 * Check if the current bullet hit the monster.
 		 */
 		checkHit: function () {
 			var cx = this.cx,
@@ -498,11 +498,11 @@ _TD.a.push(function (TD) {
 				});
 
 			if (monster) {
-				// 击中的怪物
+				// Hit the monster
 				monster.beHit(this.building, this.damage);
 				this.is_valid = false;
 
-				// 子弹小爆炸效果
+				// Bullet small explosion effect
 				TD.Explode(this.id + "-explode", {
 					cx: this.cx,
 					cy: this.cy,
@@ -537,21 +537,21 @@ _TD.a.push(function (TD) {
 	};
 
 	/**
-	 * @param id {String} 配置对象
-	 * @param cfg {Object} 配置对象
-	 *         至少需要包含以下项：
+	 * @param id {String} Configuration Object
+	 * @param cfg {Object} Configuration Object
+	 *         At a minimum, you need to include the following:
 	 *         {
-	 *			 x: 子弹发出的位置
-	 *			 y: 子弹发出的位置
+	 *			 x: The location of the bullet
+	 *			 y: The location of the bullet
 	 *			 speed:
 	 *			 damage:
-	 *			 target: 目标，一个 monster 对象
-	 *			 building: 所属的建筑
+	 *			 target: Target, a monster object.
+	 *			 building: The building that belongs to
 	 *		 }
-	 * 子弹类型，可以有以下类型：
-	 *         1：普通子弹
-	 *         2：激光类，发射后马上命中
-	 *         3：导弹类，击中后会爆炸，带来面攻击
+	 * Bullet types, you can have the following types:
+	 *         1: Ordinary Bullets
+	 *         2: Laser type, hit immediately after launch
+	 *         3: Missile class, hit will explode, bring face attack
 	 */
 	TD.Bullet = function (id, cfg) {
 		var bullet = new TD.Element(id, cfg);
