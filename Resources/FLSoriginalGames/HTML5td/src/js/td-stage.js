@@ -18,7 +18,7 @@ _TD.a.push(function (TD) {
 	/**
 	 * Stage class
 	 * @param id {String} stageID
-	 * @param cfg {Object} Configuration 配置
+	 * @param cfg {Object} Configuration 
 	 */
 	TD.Stage = function (id, cfg) {
 		this.id = id || ("stage-" + TD.lang.rndStr());
@@ -27,18 +27,18 @@ _TD.a.push(function (TD) {
 		this.height = this.cfg.height || 540;
 
 		/**
-		 * mode 有以下状态：
-		 *         "normal": Normal state普通状态
-		 *         "build": Construction mode 建造模式
+		 * mode 
+		 *         "normal": Normal state
+		 *         "build": Construction mode 
 		 */
 		this.mode = "normal";
 
 		/*
-		 * state There are several states: 有以下几种状态：
-		 * 0: Waiting in 等待中
-		 * 1: In operation 运行中
-		 * 2: Time out 暂停
-		 * 3: Has ended 已结束
+		 * state There are several states: 
+		 * 0: Waiting in 
+		 * 1: In operation 
+		 * 2: Time out 
+		 * 3: Has ended 
 		 */
 		this.state = 0;
 		this.acts = [];
@@ -71,7 +71,7 @@ _TD.a.push(function (TD) {
 			this.current_act.gameover();
 		},
 		/**
-		 * Clear the 清除本 stage 所有物品 All items
+		 * Clear the stage All items
 		 */
 		clear: function () {
 			this.state = 3;
@@ -81,7 +81,7 @@ _TD.a.push(function (TD) {
 //		delete this;
 		},
 		/**
-		 * Main loop function 主循环函数
+		 * Main loop function 
 		 */
 		step: function () {
 			if (this.state != 1 || !this.current_act) return;
@@ -91,7 +91,7 @@ _TD.a.push(function (TD) {
 			this._step2();
 		},
 		/**
-		 * Drawing functions 绘制函数
+		 * Drawing functions 
 		 */
 		render: function () {
 			if (this.state == 0 || this.state == 3 || !this.current_act) return;
@@ -117,15 +117,15 @@ _TD.a.push(function (TD) {
 		this.id = id || ("act-" + TD.lang.rndStr());
 
 		/*
-		 * state There are several states  有以下几种状态：
-		 * 0: Waiting in 等待中
-		 * 1: In operation 运行中
-		 * 2: Time out 暂停
-		 * 3: Has ended 已结束
+		 * state There are several states  
+		 * 0: Waiting in 
+		 * 1: In operation 
+		 * 2: Time out 
+		 * 3: Has ended 
 		 */
 		this.state = 0;
 		this.scenes = [];
-		this.end_queue = []; // 本 act The queue to execute after the end, and when added, make sure that it's full of functions. 结束后要执行的队列，添加时请保证里面全是函数
+		this.end_queue = []; //  act The queue to execute after the end, and when added, make sure that it's full of functions. 
 		this.current_scene = null;
 
 		this._init();
@@ -136,7 +136,7 @@ _TD.a.push(function (TD) {
 			this.stage.addAct(this);
 		},
 		/*
-		 * Start the current 开始当前 act
+		 * Start the current act
 		 */
 		start: function () {
 			if (this.stage.current_act && this.stage.current_act.state != 3) {
@@ -214,13 +214,13 @@ _TD.a.push(function (TD) {
 		 * 3: Has ended 已结束
 		 */
 		this.state = 0;
-		this.end_queue = []; // 本 scene 结束后要执行的队列，添加时请保证里面全是函数 The queue to execute after the end, and when added, make sure that it's full of functions.
+		this.end_queue = []; // 本 scene The queue to execute after the end, and when added, make sure that it's full of functions.
 		this._step_elements = [
-			// step 共分为 3 层 Divided into 3 layers
+			// step 3 层 Divided into 3 layers
 			[],
 			// 0
 			[],
-			// 1 默认 Default
+			// 1 Default
 			[] // 2
 		];
 		this._render_elements = [ // Rendering is divided into 10 layers rendering is divided into ten layers
@@ -273,7 +273,7 @@ _TD.a.push(function (TD) {
 		 * 清空场景 Empty scene
 		 */
 		clear: function () {
-			// 清空本 scene 中引用的所有对象以回收内存 Empty all objects referenced in this scene to reclaim memory
+			// 清空本 scene Empty all objects referenced in this scene to reclaim memory
 			TD.lang.shift(this._step_elements, function (obj) {
 				TD.lang.shift(obj, function (obj2) {
 					// element
@@ -321,7 +321,7 @@ _TD.a.push(function (TD) {
 					} else {
 						setTimeout(function () {
 							obj = null;
-						}, 500); // 一会儿之后将这个对象彻底删除以收回内存 After a while, remove the object completely to recover the memory.
+						}, 500); // After a while, remove the object completely to recover the memory.
 					}
 				});
 				this._step_elements[i] = a;
