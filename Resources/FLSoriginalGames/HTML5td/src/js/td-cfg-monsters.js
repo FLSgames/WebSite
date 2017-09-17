@@ -16,13 +16,13 @@
 _TD.a.push(function (TD) {
 
 	/**
-	 * 默认的怪物渲染方法
+	 * Default Monster Rendering method
 	 */
 	function defaultMonsterRender() {
 		if (!this.is_valid || !this.grid) return;
 		var ctx = TD.ctx;
 
-		// 画一个圆代表怪物
+		// Draw a circle to represent the monster
 		ctx.strokeStyle = "#000";
 		ctx.lineWidth = 1;
 		ctx.fillStyle = this.color;
@@ -32,7 +32,7 @@ _TD.a.push(function (TD) {
 		ctx.fill();
 		ctx.stroke();
 
-		// 画怪物的生命值
+		// Draw the life of the monster
 		if (TD.show_monster_life) {
 			var s = Math.floor(TD.grid_size / 4),
 				l = s * 2 - 2 * _TD.retina;
@@ -48,8 +48,8 @@ _TD.a.push(function (TD) {
 	}
 
 	/**
-	 * 取得怪物的默认属性
-	 * @param [monster_idx] {Number} 怪物的类型
+	 * Get the default properties for monsters
+	 * @param [monster_idx] {Number} Types of Monsters
 	 * @return attributes {Object}
 	 */
 	TD.getDefaultMonsterAttributes = function (monster_idx) {
@@ -58,98 +58,98 @@ _TD.a.push(function (TD) {
 			{
 				// idx: 0
 				name: "monster 1",
-				desc: "最弱小的怪物",
+				desc: "The weakest monster.",
 				speed: 3,
 				max_speed: 10,
 				life: 50,
-				damage: 1, // 到达终点后会带来多少点伤害（1 ~ 10）
+				damage: 1, // How much damage will be done when you reach the end (1 ~ 10)
 				shield: 0,
-				money: 5 // 消灭本怪物后可得多少金钱（可选）
+				money: 5 // How much money is available to destroy this monster (optional)
 			},
 			{
 				// idx: 1
 				name: "monster 2",
-				desc: "稍强一些的小怪",
+				desc: "Slightly stronger little Monsters",
 				speed: 6,
 				max_speed: 20,
 				life: 50,
-				damage: 2, // 到达终点后会带来多少点伤害（1 ~ 10）
+				damage: 2, // How much damage will be done when you reach the end (1 ~ 10)
 				shield: 1
 			},
 			{
 				// idx: 2
 				name: "monster speed",
-				desc: "速度较快的小怪",
+				desc: "The fast-moving little monsters.",
 				speed: 12,
 				max_speed: 30,
 				life: 50,
-				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
+				damage: 3, //How much damage will be done when you reach the end (1 ~ 10)
 				shield: 1
 			},
 			{
 				// idx: 3
 				name: "monster life",
-				desc: "生命值很强的小怪",
+				desc: "A very strong little monster of life.",
 				speed: 5,
 				max_speed: 10,
 				life: 500,
-				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
+				damage: 3, // How much damage will be done when you reach the end (1 ~ 10)
 				shield: 1
 			},
 			{
 				// idx: 4
 				name: "monster shield",
-				desc: "防御很强的小怪",
+				desc: "A very strong defensive little freak.",
 				speed: 5,
 				max_speed: 10,
 				life: 50,
-				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
+				damage: 3, // How much damage will be done when you reach the end (1 ~ 10)
 				shield: 20
 			},
 			{
 				// idx: 5
 				name: "monster damage",
-				desc: "伤害值很大的小怪",
+				desc: "The little freak with the big damage.",
 				speed: 7,
 				max_speed: 14,
 				life: 50,
-				damage: 10, // 到达终点后会带来多少点伤害（1 ~ 10）
-				shield: 2
+				damage: 10, // How much damage will be done when you reach the end (1 ~ 10)
+ 				shield: 2
 			},
 			{
 				// idx: 6
 				name: "monster speed-life",
-				desc: "速度、生命都较高的怪物",
+				desc: "Monsters with high speed and life",
 				speed: 15,
 				max_speed: 30,
 				life: 100,
-				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
-				shield: 3
+				damage: 3, // How much damage will be done when you reach the end (1 ~ 10)
+ 				shield: 3
 			},
 			{
 				// idx: 7
 				name: "monster speed-2",
-				desc: "速度很快的怪物",
+				desc: "Fast Monsters.",
 				speed: 30,
 				max_speed: 40,
 				life: 30,
-				damage: 4, // 到达终点后会带来多少点伤害（1 ~ 10）
-				shield: 1
+				damage: 4, // How much damage will be done when you reach the end (1 ~ 10)
+ 				shield: 1
 			},
 			{
 				// idx: 8
 				name: "monster shield-life",
-				desc: "防御很强、生命值很高的怪物",
+				desc: "A monster with very strong defenses and high life values.",
 				speed: 3,
 				max_speed: 10,
 				life: 300,
-				damage: 5, // 到达终点后会带来多少点伤害（1 ~ 10）
+				damage: 5, // How much damage will be done when you reach the end (1 ~ 10) 
 				shield: 15
 			}
 		];
 
 		if (typeof monster_idx == "undefined") {
-			// 如果只传了一个参数，则只返回共定义了多少种怪物（供 td.js 中使用）
+			// If only one argument is passed, only the number of monsters defined (for TD. JS) is returned.
 			return monster_attributes.length;
 		}
 
@@ -158,7 +158,7 @@ _TD.a.push(function (TD) {
 
 		TD.lang.mix(attr2, attr);
 		if (!attr2.render) {
-			// 如果没有指定当前怪物的渲染方法
+			// If you do not specify a rendering method for the current monster
 			attr2.render = defaultMonsterRender
 		}
 
@@ -167,10 +167,10 @@ _TD.a.push(function (TD) {
 
 
 	/**
-	 * 生成一个怪物列表，
-	 * 包含 n 个怪物
-	 * 怪物类型在 range 中指定，如未指定，则为随机
-	 */
+	 * Generate a list of monsters,
+ 	 * Contains n monsters
+ 	 * The monster type is specified in the range and is random if unspecified
+ 	 */
 	TD.makeMonsters = function (n, range) {
 		var a = [], count = 0, i, c, d, r, l = TD.monster_type_count;
 		if (!range) {
@@ -184,8 +184,8 @@ _TD.a.push(function (TD) {
 			d = n - count;
 			c = Math.min(
 				Math.floor(Math.random() * d) + 1,
-				3 // 同一类型的怪物一次最多出现 3 个，防止某一波中怪出大量高防御或高速度的怪
-			);
+				3 //Monsters of the same type show up to 3 at a time, preventing a large number of high defense or high speed monsters in a particular wave.
+ 			);
 			r = Math.floor(Math.random() * l);
 			a.push([c, range[r]]);
 			count += c;

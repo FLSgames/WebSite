@@ -15,8 +15,8 @@
 // _TD.a.push begin
 _TD.a.push(function (TD) {
 
-// main stage 初始化方法
-	var _stage_main_init = function () {
+// main stage Initialization method
+ 	var _stage_main_init = function () {
 			var act = new TD.Act(this, "act-1"),
 				scene = new TD.Scene(act, "scene-1"),
 				cfg = TD.getDefaultStageData("scene_endless");
@@ -61,8 +61,9 @@ _TD.a.push(function (TD) {
 
 			if (this.map.monsters.length == 0) {
 				if (wave > 0 && this.wait_new_wave == this.config.wait_new_wave - 1) {
-					// 一波怪物刚刚走完
-					// 奖励生命值
+					// A wave of monsters just finished.
+ 					// Reward Life Value
+ 
 
 					var wave_reward = 0;
 					if (wave % 10 == 0) {
@@ -105,14 +106,12 @@ _TD.a.push(function (TD) {
 			scene_endless: {
 				// scene 1
 				map: {
-					grid_x: 44,
-					grid_x: 44,
-					grid_y: 21
-                    ,
+					grid_x: 22,
+					grid_y: 21,
 					x: TD.padding,
 					y: TD.padding,
 					entrance: [0, 0],
-					exit: [43, 20],
+					exit: [20, 20],
 					grids_cfg: [
 						
 						{

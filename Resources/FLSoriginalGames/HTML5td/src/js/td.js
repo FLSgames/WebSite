@@ -16,42 +16,42 @@ var _TD = {
 	a: [],
 	retina: window.devicePixelRatio || 1,
 	init: function (td_board, is_debug) {
-		delete this.init; // 一旦初始化运行，即删除这个入口引用，防止初始化方法被再次调用
+		delete this.init; //Once initialized, this entry reference is deleted to prevent the initialization method from being called again
 
 		var i, TD = {
-			version: "1.0.1", // 版本命名规范参考：http://FLSgames.com
+			version: "1.0.1", //English Version naming specification Reference: http://FLSgames.com
 			is_debug: !!is_debug,
 			is_paused: true,
-			width: 16, // 横向多少个格子
-			height: 16, // 纵向多少个格子
-			show_monster_life: true, // 是否显示怪物的生命值
+			width: 16, //Horizontal number of squares
+			height: 16, // Longitudinal number of squares
+			show_monster_life: true, // Whether to display the life value of a monster
 			fps: 0,
-			exp_fps: 24, // 期望的 fps
+			exp_fps: 24, // Expectations of fps
 			exp_fps_half: 12,
 			exp_fps_quarter: 6,
 			exp_fps_eighth: 4,
 			stage_data: {},
 			defaultSettings: function () {
 				return {
-					step_time: 36, // 每一次 step 循环之间相隔多少毫秒
+					step_time: 36, // How many milliseconds between each step cycle 
 					grid_size: 32 * _TD.retina, // px
 					padding: 10 * _TD.retina, // px
-					global_speed: 0.1 // 全局速度系数
+					global_speed: 0.1 // Global Velocity coefficients 
 				};
 			},
 
 			/**
-			 * 初始化
+			 * .
 			 * @param ob_board
 			 */
 			init: function (ob_board/*, ob_info*/) {
 				this.obj_board = TD.lang.$e(ob_board);
 				this.canvas = this.obj_board.getElementsByTagName("canvas")[0];
 				//this.obj_info = TD.lang.$e(ob_info);
-				if (!this.canvas.getContext) return; // 不支持 canvas
+				if (!this.canvas.getContext) return; // does not support canvas
 				this.ctx = this.canvas.getContext("2d");
-				this.monster_type_count = TD.getDefaultMonsterAttributes(); // 一共有多少种怪物
-				this.iframe = 0; // 当前播放到第几帧了
+				this.monster_type_count = TD.getDefaultMonsterAttributes(); // How many kinds of monsters are there?
+				this.iframe = 0; // Current playback to the first few frames
 				this.last_iframe_time = (new Date()).getTime();
 				this.fps = 0;
 
@@ -59,17 +59,17 @@ var _TD = {
 			},
 
 			/**
-			 * 开始游戏，或重新开始游戏
+			 * Start the game, or start the game again 
 			 */
 			start: function () {
 				clearTimeout(this._st);
 				TD.log("Start!");
 				var _this = this;
-				this._exp_fps_0 = this.exp_fps - 0.4; // 下限
-				this._exp_fps_1 = this.exp_fps + 0.4; // 上限
+				this._exp_fps_0 = this.exp_fps - 0.4; // Lower
+				this._exp_fps_1 = this.exp_fps + 0.4; // Ceiling
 
-				this.mode = "normal"; // mode 分为 normail（普通模式）及 build（建造模式）两种
-				this.eventManager.clear(); // 清除事件管理器中监听的事件
+				this.mode = "normal"; // Mode is divided into two types: Normail (normal mode) and build (construction mode)
+				this.eventManager.clear(); // Purge events that are listening in the event manager
 				this.lang.mix(this, this.defaultSettings());
 				this.stage = new TD.Stage("stage-main", TD.getDefaultStageData("stage_main"));
 
@@ -95,15 +95,15 @@ var _TD = {
 			},
 
 			/**
-			 * 作弊方法
+			 * Cheating methods
 			 * @param cheat_code
 			 *
-			 * 用例：
-			 * 1、增加 100 万金钱：javascript:_TD.cheat="money+";void(0);
-			 * 2、难度增倍：javascript:_TD.cheat="difficulty+";void(0);
-			 * 3、难度减半：javascript:_TD.cheat="difficulty-";void(0);
-			 * 4、生命值恢复：javascript:_TD.cheat="life+";void(0);
-			 * 5、生命值降为最低：javascript:_TD.cheat="life-";void(0);
+			 * Example：
+			 * 1, add 1 million money: javascript: _td cheat= "money+"; void (0);
+			 * 2, more difficult: javascript: _td cheat= "difficulty+"; void (0);
+			 * 3, Half difficulty: javascript: _td cheat= "difficulty-"; void (0);
+			 * 4, Life Value recovery: javascript: _td cheat= "life+"; void (0);
+			 * 5, the lowest life value: javascript: _td. cheat= "life-"; void (0);
 			 */
 			checkCheat: function (cheat_code) {
 				switch (cheat_code) {
@@ -131,27 +131,27 @@ var _TD = {
 			},
 
 			/**
-			 * 主循环方法
+			 * Main Loop method
 			 */
 			step: function () {
 
 				if (this.is_debug && _TD && _TD.cheat) {
-					// 检查作弊代码
+					// Check cheat Codes
 					this.checkCheat(_TD.cheat);
 					_TD.cheat = "";
 				}
 
 				if (this.is_paused) return;
 
-				this.iframe++; // 当前总第多少帧
+				this.iframe++; // Current total number of frames
 				if (this.iframe % 50 == 0) {
-					// 计算 fps
+					// Calculation fps
 					var t = (new Date()).getTime(),
 						step_time = this.step_time;
 					this.fps = Math.round(500000 / (t - this.last_iframe_time)) / 10;
 					this.last_iframe_time = t;
 
-					// 动态调整 step_time ，保证 fps 恒定为 24 左右
+					// Dynamically adjust step_time to ensure that FPS constant is around 24
 					if (this.fps < this._exp_fps_0 && step_time > 1) {
 						step_time--;
 					} else if (this.fps > this._exp_fps_1) {
@@ -161,7 +161,7 @@ var _TD = {
 //						TD.log("FPS: " + this.fps + ", Step Time: " + step_time);
 					this.step_time = step_time;
 				}
-				if (this.iframe % 2400 == 0) TD.gc(); // 每隔一段时间自动回收垃圾
+				if (this.iframe % 2400 == 0) TD.gc(); // Automatically recycle rubbish every once in a while
 
 				this.stage.step();
 				this.stage.render();
@@ -173,7 +173,7 @@ var _TD = {
 			},
 
 			/**
-			 * 取得事件相对于 canvas 左上角的坐标
+			 * Gets the coordinates of the event relative to the upper-left corner of the canvas 
 			 * @param e
 			 */
 			getEventXY: function (e) {
@@ -185,7 +185,7 @@ var _TD = {
 			},
 
 			/**
-			 * 鼠标移到指定位置事件
+			 * Mouse over the specified location event
 			 * @param x
 			 * @param y
 			 */
@@ -194,7 +194,7 @@ var _TD = {
 			},
 
 			/**
-			 * 点击事件
+			 * Click event
 			 * @param x
 			 * @param y
 			 */
@@ -203,7 +203,7 @@ var _TD = {
 			},
 
 			/**
-			 * 是否将 canvas 中的鼠标指针变为手的形状
+			 * Change the mouse pointer in canvas to the shape of the hand 
 			 * @param v {Boolean}
 			 */
 			mouseHand: function (v) {
@@ -211,7 +211,7 @@ var _TD = {
 			},
 
 			/**
-			 * 显示调试信息，只在 is_debug 为 true 的情况下有效
+			 * Display debug information, valid only if Is_debug is true
 			 * @param txt
 			 */
 			log: function (txt) {
@@ -219,8 +219,8 @@ var _TD = {
 			},
 
 			/**
-			 * 回收内存
-			 * 注意：CollectGarbage 只在 IE 下有效
+			 * Reclaim Memory
+			 * Note: CollectGarbage only works under IE
 			 */
 			gc: function () {
 				if (window.CollectGarbage) {
@@ -231,7 +231,7 @@ var _TD = {
 		};
 
 		for (i = 0; this.a[i]; i++) {
-			// 依次执行添加到列表中的函数
+			//Perform functions added to list in sequence
 			this.a[i](TD);
 		}
 		delete this.a;

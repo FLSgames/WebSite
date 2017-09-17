@@ -16,8 +16,8 @@
 _TD.a.push(function (TD) {
 
 	/**
-	 * 默认的升级规则
-	 * @param old_level {Number}
+	 * Default upgrade Rules
+ 	 * @param old_level {Number}
 	 * @param old_value {Number}
 	 * @return new_value {Number}
 	 */
@@ -26,13 +26,13 @@ _TD.a.push(function (TD) {
 	};
 
 	/**
-	 * 取得建筑的默认属性
-	 * @param building_type {String} 建筑类型
+	 * Get the default properties for buildings
+	 * @param building_type {String} Type of building
 	 */
 	TD.getDefaultBuildingAttributes = function (building_type) {
 
 		var building_attributes = {
-			// 路障
+			// Roadblocks
 			"wall": {
 				damage: 0,
 				range: 0,
@@ -42,8 +42,7 @@ _TD.a.push(function (TD) {
 				shield: 500,
 				cost: 25
 			},
-
-			// 轻机枪
+			// Guns
             "LMG": {
 				damage: 9,
 				range: 5,
@@ -54,7 +53,7 @@ _TD.a.push(function (TD) {
 				shield: 50,
 				cost: 25
 			},
-			// 炮台
+			// Fort
             "cannon": {
 				damage: 12,
 				range: 4,
@@ -67,10 +66,8 @@ _TD.a.push(function (TD) {
 				_upgrade_rule_damage: function (old_level, old_value) {
 					return old_value * (old_level <= 10 ? 1.2 : 1.3);
 				}
-			},
-
-			
-			// 重机枪
+			},		
+			// Heavy machine guns
 			"HMG": {
 				damage: 30,
 				range: 3,
@@ -98,14 +95,13 @@ _TD.a.push(function (TD) {
 					return old_value * 1.3;
 				}
 			},
-
-			// 激光枪
+			// Laser gun
 			"laser_gun": {
 				damage: 25,
 				range: 6,
 				max_range: 10,
 				speed: 20,
-//				bullet_speed: 10, // laser_gun 的 bullet_speed 属性没有用
+//				bullet_speed: 10, // laser_gun 的 bullet_speed property is not used
 				life: 100,
 				shield: 100,
 				cost: 500,
