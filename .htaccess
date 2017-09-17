@@ -1,0 +1,12 @@
+DirectoryIndex index.html
+
+
+ErrorDocument 404 /404.html
+
+AddType image/x-icon .ico
+AddType application/zip .zip
+AddType image/gif .gif .GIF
+AddType image/jpeg .jpeg .jpg .jpe .JPG
+AddType text/html .html .htm
+AddType text/plain .txt
+AddType text/richtext .rtx

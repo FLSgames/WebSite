@@ -1,2 +1,2 @@
-# website
-Random meaningless files, INC.
+# WebSite
+The raw text files for the website.

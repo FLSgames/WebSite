@@ -1,0 +1,99 @@
+#
+# DirectoryPass is an Open Source multi-platform .htaccess file management
+# tool for use with the Apache web server software. 
+# Copyright (C) 2009 ionix Limited
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+# DirectoryPass support and assistance is available via the web site:
+# http://www.DirectoryPass.com/
+#
+
+
+- Installation
+
+1. Open dirpass.cgi in your favourite text editor and edit the top line 
+to represent the path to Perl 5 on your web server. 
+
+The most common locations are #!/usr/bin/perl or #!/usr/local/bin/perl 
+though it may be different on your server.  If you are unsure, contact 
+your system administrator/web hosting company.
+
+
+2. Save dirpass.cgi and upload it via FTP in ASCII mode to your web server.  
+Uploading in Binary will not work, you should find this option in your FTP 
+program, most likely under 'Transfer Type/Method' in the menu system.
+
+
+3. Set the permissions of dirpass.cgi to 755 (executable).  To do this you 
+can either login to your server via telnet/SSH and type: 'chmod 755 dirpass.cgi'
+
+If you're using a FTP program like CuteFTP or WsFTP you may find a 'CHMOD' or 
+'Permissions' option on the menu when 'right-clicking' on the dirpass.cgi file.
+
+
+4. Open your web browser and call up the dirpass.cgi file as you would for any 
+other file on your web site.  
+
+
+5. You will be prompted to choose a password for your copy of DirectoryPass.  
+You can also select the web server operating system you are using, if you 
+are running a Linux/Unix web server then this does not need to be adjusted, 
+selecting Windows disables the password encryption, this should be used on 
+all Windows web servers, if running a Cobalt RAQ server then select the Cobalt 
+RAQ option to generate compatible .htaccess files.
+
+
+6. The jp_lang.pl and tr_lang.pl files are optional and do not need to be
+uploaded.  Upload jp_lang.pl if you would like to use the Japanese language
+interface, or upload tr_lang.pl if you would like to use the Turkish language
+interface.  Upload in ASCII mode, permissions should not need to be changed,
+try 755 if problems occur.
+
+
+
+- Requirements
+
+Perl 5 or above
+CGI.pm Perl Module
+Apache Web Server
+
+
+
+- Troubleshooting
+
+If you have any problems, please feel free to visit the support forum at:
+http://my.DirectoryPass.com/forum/
+
+If you have trouble creating .htaccess and .htpasswd files, check your path 
+is correct and set the permissions on the directory where you want to create 
+the file to 755 or 777.
+
+If you have trouble setting your administrator password when installing 
+DirectoryPass, try setting the permissions on the directory containing 
+dirpass.cgi to 755 or 777.  Alternatively, create a blank text file called
+dp_setup.pl in the same directory as dirpass.cgi and set it's permissions 
+to 777 or 755.
+
+
+- Bugs
+
+If you think you've found a bug, make sure, double check, then feel free to
+post it in the support forum.
+
+
+- Support Forum
+
+http://my.DirectoryPass.com/forum/
