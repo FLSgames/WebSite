@@ -17,8 +17,8 @@ _TD.a.push(function (TD) {
 
 	var _default_wait_clearInvalidElements = 20;
 
-	// map 对象的属性、方法。注意属性中不要有数组、对象等
-	// 引用属性，否则多个实例的相关属性会发生冲突
+	// map The properties and methods of the object. Note that there are no arrays, objects, etc. in the attribute
+	// Reference property, or the related properties of multiple instances conflict
 	var map_obj = {
 		_init: function (cfg) {
 			cfg = cfg || {};
@@ -53,7 +53,7 @@ _TD.a.push(function (TD) {
 
 			}
 
-			// 下面添加相应的格子
+			// Add the appropriate grid below
 			var i, l = this.grid_x * this.grid_y,
 				grid_data = cfg["grid_data"] || [],
 				d, grid;
@@ -93,8 +93,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 检查地图中是否有武器（具备攻击性的建筑）
-		 * 因为第一波怪物只有在地图上有了第一件武器后才会出现
+		 * Check the map for weapons (aggressive buildings)
+		 * Because the first monster only appears when it has the first weapon on the map.
 		 */
 		checkHasWeapon: function () {
 			this.has_weapon = (this.anyBuilding(function (obj) {
@@ -103,9 +103,9 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 取得指定位置的格子对象
-		 * @param mx {Number} 地图上的坐标 x
-		 * @param my {Number} 地图上的坐标 y
+		 * Gets a lattice object at the specified location
+		 * @param mx {Number} Coordinates on the map x
+		 * @param my {Number} Coordinates on the map y
 		 */
 		getGrid: function (mx, my) {
 			var p = my * this.grid_x + mx;
@@ -132,7 +132,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 预建设
+		 * Pre-construction
 		 * @param building_type {String}
 		 */
 		preBuild: function (building_type) {
@@ -151,7 +151,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 退出预建设状态
+		 * Exit Pre-construction status
 		 */
 		cancelPreBuild: function () {
 			TD.mode = "normal";
@@ -162,7 +162,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 清除地图上无效的元素
+		 * Clear invalid elements on map
 		 */
 		clearInvalidElements: function () {
 			if (this._wait_clearInvalidElements > 0) {
@@ -194,8 +194,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 在地图的入口处添加一个怪物
-		 * @param monster 可以是数字，也可以是 monster 对象
+		 * Add a monster to the entrance of the map
+		 * @param monster can be numbers or monster Object
 		 */
 		addMonster: function (monster) {
 			if (!this.entrance) return;
@@ -211,7 +211,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 在地图的入口处添加 n 个怪物
+		 * Add at the entrance to the map n A monster
 		 * @param n
 		 * @param monster
 		 */
@@ -221,7 +221,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * arr 的格式形如：
+		 * arr In the form of:
 		 *     [[1, 0], [2, 5], [3, 6], [10, 4]...]
 		 */
 		addMonsters2: function (arr) {
@@ -229,7 +229,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 检查地图的指定格子是否可通过
+		 * Check if the map's specified grid is available
 		 * @param mx {Number}
 		 * @param my {Number}
 		 */
@@ -270,19 +270,20 @@ _TD.a.push(function (TD) {
 	};
 
 	/**
-	 * @param id {String} 配置对象
-	 * @param cfg {Object} 配置对象
-	 *         至少需要包含以下项：
+	 * @param id {String} Configuration Object
+	 * @param cfg {Object} Configuration Object
+	 *         At a minimum, you need to include the following:
+ 
 	 *         {
-	 *			 grid_x: 宽度（格子）,
-	 *			 grid_y: 高度（格子）,
-	 *			 scene: 属于哪个场景,
+	 *			 grid_x: ,Width (lattice)
+	 *			 grid_y: Height (lattice),
+	 *			 scene: Which scene belongs to?,
 	 *		 }
 	 */
 	TD.Map = function (id, cfg) {
-		// map 目前只需要监听 out 事件
-		// 虽然只需要监听 out 事件，但同时也需要监听 enter ，因为如果
-		// 没有 enter ，out 将永远不会被触发
+		// map Currently only need to monitor out events
+		// Although you only need to listen for out events, you also need to listen for enter because if
+		// No enter, out will never be triggered
 		cfg.on_events = ["enter", "out"];
 		var map = new TD.Element(id, cfg);
 		TD.lang.mix(map, map_obj);
@@ -293,7 +294,7 @@ _TD.a.push(function (TD) {
 
 
 	/**
-	 * 地图选中元素高亮边框对象
+	 * Map selected element Highlight Border object
 	 */
 	var map_selecthl_obj = {
 		_init: function (cfg) {
@@ -319,11 +320,12 @@ _TD.a.push(function (TD) {
 	};
 
 	/**
-	 * 地图选中的高亮框
-	 * @param id {String} 至少需要包含
-	 * @param cfg {Object} 至少需要包含
+	 * Highlight box with map selected
+	 * @param id {String} You need to include at least
+	 * @param cfg {Object} You need to include at least
+ 
 	 *      {
-	 *          map: map 对象
+	 *          map: map Object
 	 *      }
 	 */
 	TD.MapSelectHighLight = function (id, cfg) {
@@ -368,7 +370,7 @@ _TD.a.push(function (TD) {
 	};
 
 	/**
-	 * 主地图外边的遮罩，用于遮住超出地图的射程等
+	 * A mask outside the main map used to cover the range beyond the map.
 	 */
 	function MainMapMask(id, cfg) {
 		var mmm = new TD.Element(id, cfg);
