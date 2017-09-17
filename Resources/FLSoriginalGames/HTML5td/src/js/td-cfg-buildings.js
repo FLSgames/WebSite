@@ -1,10 +1,15 @@
 ﻿/*
- * Copyright (c) 2011.
+ * ____ ____ ____ ____ ____ ____ ____ ____ 
+ *||F |||L |||S |||G |||A |||M |||E |||S ||
+ *||__|||__|||__|||__|||__|||__|||__|||__||
+ *|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|Copyright (c) 2017.
+ * 
  *
- * Author: oldj <oldj.wu@gmail.com>
- * Blog: http://oldj.net/
+ * Author: FLS <DanielH@FlashLightningstudios.com>
+ * Website: http://www.FLSgames.com
  *
- * 本文件定义了建筑的参数、属性
+ * Latest Update: 09/05/2017
+ *
  */
 
 // _TD.a.push begin

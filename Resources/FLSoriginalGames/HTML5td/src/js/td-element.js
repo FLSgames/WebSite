@@ -1,16 +1,17 @@
 ﻿/*
- * Copyright (c) 2011.
+ * ____ ____ ____ ____ ____ ____ ____ ____ 
+ *||F |||L |||S |||G |||A |||M |||E |||S ||
+ *||__|||__|||__|||__|||__|||__|||__|||__||
+ *|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|Copyright (c) 2017.
+ * 
  *
- * Author: oldj <oldj.wu@gmail.com>
- * Blog: http://oldj.net/
+ * Author: FLS <DanielH@FlashLightningstudios.com>
+ * Website: http://www.FLSgames.com
  *
- *
- * This file defines the element class, which is the base class for all elements in the game.
- * including maps, lattices, monsters, buildings, bullets, balloon tips, etc. are based on this class
+ * Latest Update: 09/05/2017
  *
  */
-
-
+ 
 // _TD.a.push begin
 _TD.a.push(function (TD) {
 

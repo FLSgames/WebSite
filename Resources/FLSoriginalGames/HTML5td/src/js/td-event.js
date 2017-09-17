@@ -1,12 +1,16 @@
 ﻿/*
- * Copyright (c) 2011.
+ * ____ ____ ____ ____ ____ ____ ____ ____ 
+ *||F |||L |||S |||G |||A |||M |||E |||S ||
+ *||__|||__|||__|||__|||__|||__|||__|||__||
+ *|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|Copyright (c) 2017.
+ * 
  *
- * Author: oldj <oldj.wu@gmail.com>
- * Blog: http://oldj.net/
+ * Author: FLS <DanielH@FlashLightningstudios.com>
+ * Website: http://www.FLSgames.com
  *
- * Last Update: 2011/1/10 5:22:52
+ * Latest Update: 09/05/2017
+ *
  */
-
 
 // _TD.a.push begin
 _TD.a.push(function (TD) {

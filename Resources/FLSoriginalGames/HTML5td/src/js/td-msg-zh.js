@@ -5,7 +5,7 @@
  *|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|Copyright (c) 2017.
  * 
  *
- * Author: FLS <DanielH@FlashLightningstudios.com.com>
+ * Author: FLS <DanielH@FlashLightningstudios.com>
  * Website: http://www.FLSgames.com
  *
  * Latest Update: 09/05/2017
