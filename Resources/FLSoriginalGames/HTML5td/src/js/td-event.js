@@ -16,27 +16,27 @@
 _TD.a.push(function (TD) {
 
 	/**
-	 * 事件管理器
+	 * Event Manager
 	 */
 	TD.eventManager = {
-		ex: -1, // 事件坐标 x
-		ey: -1, // 事件坐标 y
-		_registers: {}, // 注册监听事件的元素
+		ex: -1, //  x Event coordinates
+		ey: -1, // Event coordinates  y
+		_registers: {}, // Registering the elements of a listener event
 
-		// 目前支持的事件类型
+		// Currently supported event types
 		ontypes: [
-			"enter", // 鼠标移入
-			"hover", // 鼠标在元素上，相当于 onmouseover
-			"out", // 鼠标移出
-			"click" // 鼠标点击
+			"enter", // Mouse to move
+			"hover", // The mouse is on the element, equivalent to onmouseover
+			"out", // Mouse out
+			"click" // Mouse clicks
 		],
 
-		// 当前事件类型
+		// Current Event Type
 		current_type: "hover",
 
 		/**
-		 * 根据事件坐标，判断事件是否在元素上
-		 * @param el {Element} Element 元素
+		 * Determines whether an event is on an element, depending on the event coordinates
+		 * @param el {Element} Element Element 
 		 * @return {Boolean}
 		 */
 		isOn: function (el) {
@@ -49,18 +49,18 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 根据元素名、事件名，生成一个字符串标识，用于注册事件监听
+		 * Generates a string ID, based on the element name, event name, for registering event sniffing
 		 * @param el {Element}
 		 * @param evt_type {String}
-		 * @return evt_name {String} 字符串标识
+		 * @return evt_name {String} String identification
 		 */
 		_mkElEvtName: function (el, evt_type) {
 			return el.id + "::_evt_::" + evt_type;
 		},
 
 		/**
-		 * 为元素注册事件监听
-		 * 现在的实现比较简单，如果一个元素对某个事件多次注册监听，后面的监听将会覆盖前面的
+		 * Registering event listeners for an element
+		 * Now the implementation is relatively simple, if an element on an event multiple registration listening, the subsequent listening will overwrite the previous
 		 *
 		 * @param el {Element}
 		 * @param evt_type {String}
@@ -71,7 +71,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 移除元素对指定事件的监听
+		 * To remove a listener from an element to a specified event
 		 * @param el {Element}
 		 * @param evt_type {String}
 		 */
@@ -81,7 +81,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 清除所有监听事件
+		 * Clear All Listening events
 		 */
 		clear: function () {
 			delete this._registers;
@@ -93,7 +93,7 @@ _TD.a.push(function (TD) {
 		 * 主循环方法
 		 */
 		step: function () {
-			if (!this.current_type) return; // 没有事件被触发
+			if (!this.current_type) return; // No event is triggered
 
 			var k, a, el, et, f,
 			//en,
@@ -107,51 +107,51 @@ _TD.a.push(function (TD) {
 			//var m = TD.stage.current_act.current_scene.map;
 			//TD.log([m.is_hover, this.isOn(m)]);
 
-			// 遍历当前注册的事件
+			// Iterate through the currently registered event
 			for (k in this._registers) {
 //				reg_length ++;
 				if (!this._registers.hasOwnProperty(k)) continue;
 				a = this._registers[k];
-				el = a[0]; // 事件对应的元素
-				et = a[1]; // 事件类型
-				f = a[2]; // 事件处理函数
+				el = a[0]; // Event-Corresponding Element
+				et = a[1]; // Event Type
+				f = a[2]; // Event handler function
 				if (!el.is_valid) {
 					to_del_el.push(el);
 					continue;
 				}
-				if (!el.is_visiable) continue; // 不可见元素不响应事件
+				if (!el.is_visiable) continue; // Invisible elements do not respond to events
 
-				is_evt_on = this.isOn(el); // 事件是否发生在元素上
+				is_evt_on = this.isOn(el); // Whether an event occurs on an element
 
 				if (this.current_type != "click") {
-					// enter / out / hover 事件
+					// enter / out / hover Event
 
 					if (et == "hover" && el.is_hover && is_evt_on) {
-						// 普通的 hover
+						// English Ordinary. hover
 						f();
 						this.current_type = "hover";
 					} else if (et == "enter" && !el.is_hover && is_evt_on) {
-						// enter 事件
+						// enter Event
 						el.is_hover = true;
 						f();
 						this.current_type = "enter";
 					} else if (et == "out" && el.is_hover && !is_evt_on) {
-						// out 事件
+						// out Event
 						el.is_hover = false;
 						f();
 						this.current_type = "out";
 //					} else {
-						// 事件与当前元素无关
+						// Event is not related to current element
 //					continue;
 					}
 
 				} else {
-					// click 事件
+					// click Event
 					if (is_evt_on && et == "click") f();
 				}
 			}
 
-			// 删除指定元素列表的事件
+			// Deletes the event for the specified element list
 			TD.lang.each(to_del_el, function (obj) {
 				for (j = 0; j < ontypes_len; j++)
 					_this.removeEventListener(obj, _this.ontypes[j]);
@@ -161,12 +161,12 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 鼠标在元素上
+		 * Mouse on element
 		 * @param ex {Number}
 		 * @param ey {Number}
 		 */
 		hover: function (ex, ey) {
-			// 如果还有 click 事件未处理则退出，点击事件具有更高的优先级
+			// If the Click event is not processed then exits, and the Click event has a higher priority
 			if (this.current_type == "click") return;
 
 			this.current_type = "hover";
@@ -175,7 +175,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 点击事件
+		 * Click event
 		 * @param ex {Number}
 		 * @param ey {Number}
 		 */
