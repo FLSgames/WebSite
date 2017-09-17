@@ -4,7 +4,7 @@
 
 <style>
 body {
-background: url(/Resources/BGimages/gameview.jpg);
+background: url(/Resources/BGimages/DeepSpace4K.jpg);
 background-size:100%;
 background-repeat: no-repeat;
 width: 100%;
@@ -19,8 +19,7 @@ width: 100%;
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="icon" href="/favicon.ico">
-</head>
-    
+</head>    
     <body>
         <div class="container">
   
@@ -33,8 +32,81 @@ width: 100%;
                 <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </div>
             <div class="btn-group btn-group-justified">
-                <a href="webapp01.html" class="btn btn-primary">Havock TD</a>
+                
              </div>
        </div>
     </body>
+    <hr/>
+    <center>
+    <style>
+      body {
+      position: relative;
+  }
+  ul.nav-pills {
+      top: 250px;
+      position: fixed;
+  }
+  div.col-sm-9 div {
+      height: 250px;
+      font-size: 30px;
+  }
+  #section1 {color: #fff; background-color: #1E88E5;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section41 {color: #fff; background-color: #00bcd4;}
+  #section42 {color: #fff; background-color: #009688;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 150px;
+    }
+  }
+  </style>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Havok TD</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section41">Section 4-1</a></li>
+            <li><a href="#section42">Section 4-2</a></li>                     
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+      <div id="section1">    
+        <h1>Havok TD</h1>
+          <a href="webapp01.html" class="btn btn-primary">Havock TD</a>
+        <p>Try your luck today! Play this Savage FLS tower defense game now!</p>
+      </div>
+      <div id="section2"> 
+        <h1>Section 2</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>        
+      <div id="section3">         
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section41">         
+        <h1>Section 4-1</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>      
+      <div id="section42">         
+        <h1>Section 4-2</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+    </center>
 </html>
