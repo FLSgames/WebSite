@@ -82,7 +82,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 对一个数组的每一个元素执行指定方法
+		 * Executes the specified method on each element of an array
 		 * @param list {Array}
 		 * @param f {Function}
 		 */
@@ -97,9 +97,9 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 对一个数组的每一项依次执行指定方法，直到某一项的返回值为 true
-		 * 返回第一个令 f 值为 true 的元素，如没有元素令 f 值为 true，则
-		 * 返回 null
+		 * Executes the specified method in sequence for each item of an array until the return value of an item is true
+		 * Returns the first element that has the F value true, and if there is no element to make the F value true,
+		 *  null Returns
 		 * @param list {Array}
 		 * @param f {Function}
 		 * @return {Object}
@@ -113,9 +113,9 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 依次弹出列表中的元素，并对其进行操作
-		 * 注意，执行完毕之后原数组将被清空
-		 * 类似于 each，不同的是这个函数执行完后原数组将被清空
+		 * Eject the elements in the list in turn and manipulate them
+		 * Note that the original array will be emptied after execution.
+		 * Similar to each, the difference is that the original array will be emptied after the function is executed
 		 * @param list {Array}
 		 * @param f {Function}
 		 */
@@ -127,8 +127,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 传入一个数组，将其随机排序并返回
-		 * 返回的是一个新的数组，原数组不变
+		 * Passing in an array, sorting it randomly and returning
+		 * Returns a new array that does not change the original array
 		 * @param list {Array}
 		 * @return {Array}
 		 */
@@ -144,7 +144,7 @@ _TD.a.push(function (TD) {
 			return s.length == 2 ? s : ("0" + s);
 		},
 		/**
-		 * 随机生成一个 RGB 颜色
+		 * Randomly generate an RGB color
 		 */
 		rndRGB: function () {
 			var r = Math.floor(Math.random() * 256),
@@ -154,9 +154,9 @@ _TD.a.push(function (TD) {
 			return "#" + this._rndRGB2(r) + this._rndRGB2(g) + this._rndRGB2(b);
 		},
 		/**
-		 * 将一个 rgb 色彩字符串转化为一个数组
+		 * Converts an RGB color string to an array
 		 * eg: '#ffffff' => [255, 255, 255]
-		 * @param rgb_str {String} rgb色彩字符串，类似于“#f8c693”
+		 * @param rgb_str {string} RGB color string, similar to ' #f8c693 '
 		 */
 		rgb2Arr: function (rgb_str) {
 			if (rgb_str.length != 7) return [0, 0, 0];
@@ -187,13 +187,13 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 空函数，一般用于占位
+		 * Null function, commonly used for placeholder
 		 */
 		nullFunc: function () {
 		},
 
 		/**
-		 * 判断两个数组是否相等
+		 * Determine whether two arrays are equal
 		 *
 		 * @param arr1 {Array}
 		 * @param arr2 {Array}
@@ -211,11 +211,11 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 将所有 s 的属性复制给 r
+		 * Copy all properties of S to R
 		 * @param r {Object}
 		 * @param s {Object}
-		 * @param [is_overwrite] {Boolean} 如指定为 false ，则不覆盖已有的值，其它值
-		 *      包括 undefined ，都表示 s 中的同名属性将覆盖 r 中的值
+		 * @param [is_overwrite] {Boolean} If specified as false, the existing value is not overwritten, and other values
+		 *      Includes undefined, which means that the property with the same name in S will overwrite the value in R
 		 */
 		mix: function (r, s, is_overwrite) {
 			if (!s || !r) return r;
