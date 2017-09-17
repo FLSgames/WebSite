@@ -34,8 +34,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 根据 map 位置及本 grid 的 (mx, my) ，计算格子的位置
-		 */
+		 * Calculates the grid position according to the map location and the grid's (MX, my)
+ 		 */
 		caculatePos: function () {
 			this.x = this.map.x + this.mx * TD.grid_size;
 			this.y = this.map.y + this.my * TD.grid_size;
@@ -46,8 +46,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 检查如果在当前格子建东西，是否会导致起点与终点被阻塞
-		 */
+		 * Check if building something in the current grid will cause the starting point and end point to be blocked
+ 		 */
 		checkBlock: function () {
 			if (this.is_entrance || this.is_exit) {
 				this._block_msg = TD._t("entrance_or_exit_be_blocked");
@@ -81,8 +81,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 购买建筑
-		 * @param building_type {String}
+		 * Buy Building
+ 		 * @param building_type {String}
 		 */
 		buyBuilding: function (building_type) {
 			var cost = TD.getDefaultBuildingAttributes(building_type).cost || 0;
@@ -96,13 +96,13 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 在当前格子添加指定类型的建筑
-		 * @param building_type {String}
+		 * Add the specified type of building in the current grid
+ 		 * @param building_type {String}
 		 */
 		addBuilding: function (building_type) {
 			if (this.building) {
-				// 如果当前格子已经有建筑，先将其移除
-				this.removeBuilding();
+				// If the current grid already has a construction, remove it first
+ 				this.removeBuilding();
 			}
 
 			var building = new TD.Building("building-" + building_type + "-" + TD.lang.rndStr(), {
@@ -122,8 +122,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 移除当前格子的建筑
-		 */
+		 * Remove the construction of the current lattice
+ 		 */
 		removeBuilding: function () {
 			if (this.build_flag == 2)
 				this.build_flag = 1;
@@ -133,8 +133,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 在当前建筑添加一个怪物
-		 * @param monster
+		 * Add a monster to the current building
+ 		 * @param monster
 		 */
 		addMonster: function (monster) {
 			monster.beAddToGrid(this);
@@ -143,8 +143,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 高亮当前格子
-		 * @param show {Boolean}
+		 * Highlight current lattice
+ 		 * @param show {Boolean}
 		 */
 		hightLight: function (show) {
 			this.map.select_hl[show ? "show" : "hide"](this);
@@ -170,8 +170,8 @@ _TD.a.push(function (TD) {
 			}
 
 			if (this.passable_flag == 0) {
-				// 不可通过
-				ctx.fillStyle = "#fcc";
+				// Not available
+ 				ctx.fillStyle = "#fcc";
 				ctx.beginPath();
 				ctx.fillRect(px, py, this.width, this.height);
 				ctx.closePath();
@@ -179,8 +179,8 @@ _TD.a.push(function (TD) {
 			}
 
 			/**
-			 * 画入口及出口
-			 */
+			 * Painting entrances and exits
+ 			 */
 			if (this.is_entrance || this.is_exit) {
 				ctx.lineWidth = 1;
 				ctx.fillStyle = "#ccc";
@@ -207,7 +207,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 鼠标进入当前格子事件
+		 * Mouse into current lattice event
 		 */
 		onEnter: function () {
 			if (this.map.is_main_map && TD.mode == "build") {
@@ -236,33 +236,33 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 鼠标移出当前格子事件
-		 */
+		 * Mouse out of current lattice event
+ 		 */
 		onOut: function () {
-			// 如果当前气球提示指向本格子，将其隐藏
-			if (this.scene.panel.balloontip.el == this) {
+			// If the current balloon tip points to the grid, hide it
+ 			if (this.scene.panel.balloontip.el == this) {
 				this.scene.panel.balloontip.hide();
 			}
 		},
 
 		/**
-		 * 鼠标点击了当前格子事件
-		 */
+		 * Mouse clicked the current lattice event
+ 		 */
 		onClick: function () {
 			if (this.scene.state != 1) return;
 
 			if (TD.mode == "build" && this.map.is_main_map && !this.building) {
-				// 如果处于建设模式下，并且点击在主地图的空格子上，则尝试建设指定建筑
+				// If you are in construction mode and click on the empty grid on the main map, try to build the designated building
 				if (this.checkBlock()) {
-					// 起点与终点之间被阻塞，不能修建
-					this.scene.panel.balloontip.msg(this._block_msg, this);
+					// Between the beginning and the end is blocked, cannot build
+ 					this.scene.panel.balloontip.msg(this._block_msg, this);
 				} else {
-					// 购买建筑
-					this.buyBuilding(this.map.pre_building.type);
+					// Buy Building
+ 					this.buyBuilding(this.map.pre_building.type);
 				}
 			} else if (!this.building && this.map.selected_building) {
-				// 取消选中建筑
-				this.map.selected_building.toggleSelected();
+				// Cancel the selected building
+ 				this.map.selected_building.toggleSelected();
 				this.map.selected_building = null;
 			}
 		}
@@ -270,12 +270,12 @@ _TD.a.push(function (TD) {
 
 	/**
 	 * @param id {String}
-	 * @param cfg {object} 配置对象
-	 *         至少需要包含以下项：
-	 *         {
-	 *			 mx: 在 map 格子中的横向坐标,
-	 *			 my: 在 map 格子中的纵向坐标,
-	 *			 map: 属于哪个 map,
+	 * @param cfg {object} Configuration Object
+ 	 *         At a minimum, you need to include the following:
+ 	 *         {
+	 * MX: The horizontal coordinates in the map grid,
+	 * my: The vertical coordinates in the map grid,
+	 * Map: Which map belongs to,
 	 *		 }
 	 */
 	TD.Grid = function (id, cfg) {
