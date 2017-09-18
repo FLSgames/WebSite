@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.0, user-scalable=yes">
+	<title>Havok TD</title>
+	<link href="css/c.css" rel="stylesheet" media="screen">
+    <style>
+        body {
+            color: black;
+             }
+
+        h1 {
+            color: green;
+           }  
+</style>
+</head>
+<Center>
+<body id="tower-defense">
+<div id="wrapper">
+	<div id="td-wrapper">
+        <h1>Havok Tower Defense</h1>
+
+		<div id="td-loading">Loading...</div>
+		<div id="td-board">
+			<canvas id="td-canvas">Sorry, your browser does not support HTML 5 Canvas tags, please use Ie9/chrome/opera and other browsers to browse this page for best results.</canvas>
+		</div>
+	</div>
+	</div>
+
+<script type="text/javascript" src="js/td.js"></script>
+<script type="text/javascript" src="js/td-lang.js"></script>
+<script type="text/javascript" src="js/td-event.js"></script>
+<script type="text/javascript" src="js/td-stage.js"></script>
+<script type="text/javascript" src="js/td-element.js"></script>
+<script type="text/javascript" src="js/td-obj-map.js"></script>
+<script type="text/javascript" src="js/td-obj-grid.js"></script>
+<script type="text/javascript" src="js/td-obj-building.js"></script>
+<script type="text/javascript" src="js/td-obj-monster.js"></script>
+<script type="text/javascript" src="js/td-obj-panel.js"></script>
+<script type="text/javascript" src="js/td-data-stage-1.js"></script>
+<script type="text/javascript" src="js/td-cfg-buildings.js"></script>
+<script type="text/javascript" src="js/td-cfg-monsters.js"></script>
+<script type="text/javascript" src="js/td-render-buildings.js"></script>
+<script type="text/javascript" src="js/td-msg-en.js"></script>
+<script type="text/javascript" src="js/td-walk.js"></script>
+
+<!--<script type="text/javascript" src="td-pkg-min.js?fmts=1"></script>-->
+<script type="text/javascript">
+	window.onload = function () {
+		_TD.init("td-board", true);
+		document.getElementById("td-loading").style.display = "none";
+		document.getElementById("td-board").style.display = "block";
+	};
+</script>
+</body>
+</Center>
+</html>

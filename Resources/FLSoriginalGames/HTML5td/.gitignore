@@ -1,7 +1,0 @@
-.idea
-*.iml
-*.pyc
-build/td-pkg.js
-src/css/c-min.css
-node_modules
-npm-debug.log
