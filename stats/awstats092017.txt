@@ -1,0 +1,646 @@
+AWSTATS DATA FILE 6.9 (build 1.925)
+# If you remove this file, all statistics for date 201709 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1864                
+POS_TIME 2535                
+POS_VISITOR 13673               
+POS_DAY 19465               
+POS_DOMAIN 3369                
+POS_LOGIN 3602                
+POS_ROBOT 3804                
+POS_WORMS 4393                
+POS_EMAILSENDER 4524                
+POS_EMAILRECEIVER 4667                
+POS_SESSION 20249               
+POS_SIDER 20456               
+POS_FILETYPES 4802                
+POS_OS 4998                
+POS_BROWSER 5131                
+POS_SCREENSIZE 5513                
+POS_UNKNOWNREFERER 5587                
+POS_UNKNOWNREFERERBROWSER 5833                
+POS_ORIGIN 5964                
+POS_SEREFERRALS 6108                
+POS_PAGEREFS 6266                
+POS_SEARCHWORDS 6701                
+POS_KEYWORDS 6853                
+POS_MISC 2199                
+POS_ERRORS 6912                
+POS_CLUSTER 3458                
+POS_SIDER_404 7088                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20171001005933 3743 977065 38171606182
+FirstTime 0
+LastTime 20170930182556
+LastUpdate 20171001021158 3743 3672 70 0 0
+TotalVisits 234                 
+TotalUnique 153                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 156                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 45 85 86546256 18 18 14873
+1 6 24 2227016 45 45 29118
+2 11 11 3336 21 22 22236
+3 16 16 21034 44 45 26734
+4 7 25 66629 22 22 15223
+5 75 186 2684439 282 663 1741946
+6 3 3 0 27 27 17024
+7 8 28 2332183 16 17 15952
+8 19 44 33547945 47 48 30438
+9 33 122 4987852 30 31 12384
+10 16 55 17794346 34 36 65457346
+11 36 98 14812661 14 25 9139204
+12 11 14 12133 70 70 32325
+13 29 107 86629457 89 96 473978284
+14 17 56 12464937 32 36 116800810
+15 3 5 2224087 56 59 35585
+16 18 40 23412935 17 18 12739
+17 36 95 17779073 27 28 16088
+18 43 138 39403301 62 64 41639
+19 30 71 12110819 14 21 16665
+20 16 55 13813753 61 63 31329
+21 43 136 71753225 44 51 43263
+22 50 180 31293504 23 23 21031
+23 61 135 449670826 20 20 178416781
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 632 1729 925591747
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 1
+flashlightningstudio 2 83 32895 20170927050320
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 13
+spider 502 1637388 20170930055116 0
+mj12bot 46 11920 20170930133542 0
+yandex 25 23286 20170927024348 0
+no_user_agent 23 18430 20170928231330 0
+bot[+:,\.\;\/\\-] 14 18875 20170929032300 0
+googlebot 10 3837 20170930182031 0
+baiduspider 8 5064 20170920002709 0
+crawl 5 2237 20170924163553 0
+python 4 2784 20170916234824 0
+phantom 4 18242688 20170912131305 0
+archive\.org_bot 1 1439 20170925045723 0
+mail\.ru 2 1385 20170930203614 0
+robot 1 0 20170922190606 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 8
+css 75 30685 0 0
+png 112 40023439 0 0
+mp4 9 640581813 0 0
+html 614 458706 0 0
+jpg 80 240849522 0 0
+js 828 3343707 0 0
+pl 9 303581 0 0
+gif 2 294 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 9
+winlong 7
+winxp 10
+winnt 1160
+winvista 3
+linux 246
+macosx 75
+win2003 6
+Unknown 21
+win2008 201
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 26
+msie6.0 2
+firefox32.0 1
+firefox50.0 3
+firefox53.0 2
+chrome 1438
+firefox26.0 1
+firefox3.0 1
+firefox55.0 22
+opera 1
+firefox52.0 23
+firefox54.0 4
+firefox49.0 4
+msie11 1
+firefox24.0 1
+msie8.0 4
+firefox6.0.2 3
+mozilla 22
+msie7.0 6
+firefox40.1 4
+firefox51.0 2
+firefox3.6.3 2
+msie9.0 109
+firefox36.0 1
+Unknown 9
+firefox15.0.1 1
+safari 62
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 4
+Mozilla/5.0_(compatible;_Dataprovider.com;) 20170921054525
+2011 20170907085916
+Mozilla/5.0_(compatible;_ips-agent) 20170914184240
+panscient.com 20170928182619
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+2011 20170907085916
+panscient.com 20170928182619
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 235 236
+From1 3 3
+From2 52 102
+From3 18 18
+From4 324 1370
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+google 52 102
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 8
+http://m.facebook.com 7 7
+http://burger-imperia.com 3 3
+http://flsgames.com 3 3
+https://www.ipage.com/controlpanel/VisitorStats.bml 1 1
+http://pizza-tycoon.com 1 1
+HTTP://flsgames.com/contact.html 1 1
+https://www.facebook.com 1 1
+https://www1.ipage.com/controlpanel/VisitorStats.bml 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 8
+401 10 4010
+403 1 202
+302 305 104013
+206 75 825469738
+405 1 228
+500 12 6228
+406 1 263
+404 498 415002
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 150
+/blog/wp-includes/wlwmanifest.xml 2 -
+/ 18 -
+/admin.php 7 -
+/.well-known/apple-app-site-association 1 -
+/flikQ/rocketeercms/blob/master/themes/admin/assets/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/site/wp-includes/wlwmanifest.xml 2 -
+/services 1 -
+/wp-content/themes/headway-162/style.css 1 http://flashlightningstudios.com/wp-content/themes/headway-162/style.css
+/test/Home.htmlMaXoZ/RSTWZ/YVdYZ/ 1 -
+/PYROZ/ 1 -
+/test/Home.htmltest/Home.html 1 -
+/test/Home.htmlPlNgZ/ 1 -
+/about-fls.html 1 -
+/xmlrpc.php 2 -
+/test/Home.htmltest/Home.htmlMagUZ/LLMXZ/ZbgpZ/ 2 -
+/RSTWZ/YVdYZ/ 1 -
+/tinymce_pt/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/tmp/sfx.php 1 -
+/index.php/admin 1 -
+/Resources/FLSoriginalGames/HTML5td/src/td.html 1 http://www.google.com/url
+/th1s_1s_a_4o4.html 28 http://www.google.com/url
+/Resources/FLSoriginalGames/HTML5td/src/js/td-obj-panel.js 1 http://www.google.com/url
+/tinybrowser/upload.php 1 -
+/test/Home.htmltest/Home.htmlPlNgZ/ 1 -
+/test/Home.htmlLmaNZ/QOQRZ/ZnKMZ/PYROZ/ 1 -
+/XimSZ/ 1 -
+/administrator/ 7 -
+/Resources/SiteImages/Usable/Video2.mp4 1 -
+/KLcZZ/YTZTZ/contact.html 1 -
+/wp-login.php 6 -
+/downloader 2 -
+/nope.html 1 -
+/projects/bilardII/resources/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/tinybrowser/tree/tinybrowser/upload.php 1 -
+/Resources/FLSoriginalGames/HTML5td/src/css/c.css 1 http://www.google.com/url
+/wp-content/themes/organizer/lib_upload/server/php/ 1 http://flashlightningstudios.com/wp-content/themes/organizer/lib_upload/server/php/
+/Resources/FLSoriginalGames//MMO/BD/Active/chat.html 1 http://flashlightningstudios.com/webapp02.html
+/home/users/web/b2697/ipg.flashlightningstudio 2 -
+/krd.txt 1 -
+/libraries/sfn.php 1 -
+/wp-includes/wlwmanifest.xml 2 -
+/index.html 2 -
+/wp-admin/admin-ajax.php 1 -
+/wp-admin 1 http://flashlightningstudios.com
+/test/Home.htmlPYROZ/ 2 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-obj-building.js 1 -
+/js/tinymce/plugins/tinybrowser/upload.php 1 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-stage.js 1 -
+/UQMhZ/ 1 -
+/test/Home.htmlZbgpZ/ 1 -
+/NkKNZ/build-your-own-pc.html 1 -
+/test/Home.htmltest/Home.htmlYRlKZ/RcpRZ/KcVlZ/UXacZ/RQcZZ/ 2 -
+/UapcZ/LmaNZ/QOQRZ/ZnKMZ/PYROZ/ 3 -
+/SVKYZ/PYnlZ/ToKdZ/ 1 -
+/WnYPZ/territory-war.html 1 -
+/static/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/viewer/viewer.js 2 http://m.flashlightningstudios.com/about-fls
+/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/administrator/index.php 8 http://flashlightningstudios.com/administrator/
+/Resources/FLSoriginalGames/HTML5td/src/js/td-render-buildings.js 1 -
+/bd/search 1 -
+/test/Home.htmlXTkmZ/RLngZ/LcVNZ/WWkNZ/gallery 1 -
+/RcpRZ/KcVlZ/UXacZ/RQcZZ/ 2 -
+/wordpress/wp-includes/wlwmanifest.xml 2 -
+/UPfmZ/UcigZ/videos 1 -
+/test/Home.htmlRSTWZ/YVdYZ/ 1 -
+/test/Home.htmlXOaTZ/MoinZ/ZlTiZ/XOaTZ/UUjeZ/ 1 -
+/site.aspx 1 -
+/about-fls 3 -
+/jm-ajax/upload_file/ 1 http://flashlightningstudios.com/jm-ajax/upload_file/
+/test/Home.htmlNURLZ/NPYQZ/UapcZ/LmaNZ/QOQRZ/ZnKMZ/PYROZ/ 1 -
+/URYWZ/ 1 -
+/test/Home.htmlXUbhZ/ 1 -
+/sitemap.xml 3 -
+/test/Home.htmltest/Home.htmltest/Home.htmlVLNWZ/ 1 -
+/videos 1 -
+/robots.txt 193 -
+/QoWWZ/ 1 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-obj-map.js 1 -
+/manager/ 1 -
+/public/javascripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/Resources/SiteImages/icon.png 1 http://www.flashlightningstudios.com/
+/viewer/viewer.css 2 http://m.flashlightningstudios.com/about-fls
+/MaXoZ/RSTWZ/YVdYZ/ 1 -
+/test/Home.html 1 -
+/learn2fly.html 1 -
+/Resources/FLSoriginalGames/MMO/BD/Active/Home.html 5 -
+/admin/index.php 1 -
+/public/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/wp-admin/ 5 http://flashlightningstudios.com/wp-login.php
+/NSTMZ/XimSZ/ 1 -
+/PYXpZ/ 1 http://flsgames.com
+/RQcZZ/ 1 -
+/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/NPYQZ/UapcZ/LmaNZ/QOQRZ/ZnKMZ/PYROZ/ 1 -
+/steel-grinder.html 1 -
+/RiWRZ/PQgOZ/ 1 -
+/uploads/3/4/9/3/34932104/8856266.jpg 9 -
+/KLcZZ/YTZTZ/http%3A%2F%2Fwww%2EFLSGAMES%2Ecom%2Fcontact%2Ehtml 1 -
+/apple-touch-icon-120x120.png 2 -
+/OpnXZ/NSTMZ/XimSZ/ 3 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-cfg-buildings.js 1 -
+/cat-bin/tools/login/lib/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/watch-now 1 -
+/RNkgZ/watch-now.html 1 -
+/build-your-own-pc 3 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-walk.js 1 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-event.js 1 -
+/uploads/3/4/9/3/34932104/4839778.png 6 -
+/apple-touch-icon-120x120-precomposed.png 2 -
+/test/Home.htmltest/Home.htmlXTkmZ/RLngZ/LcVNZ/WWkNZ/gallery 1 -
+/php/tinybrowser/upload.php 1 -
+/Resources/BGimages/wall.png 1 http://www.flashlightningstudios.com/webapp01.html
+/apple-touch-icon.png 2 -
+/RXfWZ/ 1 -
+/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/YXQbZ/ 1 -
+/.well-known/assetlinks.json 1 -
+/TemZZ/PcWfZ/LRKiZ/SpRhZ/OpnXZ/NSTMZ/XimSZ/ 1 -
+/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/PlNgZ/ 1 -
+/typo3/ 1 -
+/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/wp-content/plugins/simple-forum/editors/tinymce/plugins/tinybrowser/upload.php 1 -
+/ZpLTZ/WcaMZ/VNogZ/RRfTZ/VQQQZ/RoSXZ/LiNkZ/PpbSZ/ 1 -
+/admin/lib/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/cms/wp-includes/wlwmanifest.xml 2 -
+/XUbhZ/ 1 -
+/QVMaZ/ 1 -
+/test/Home.htmltest/Home.htmltest/Home.htmlOpnZZ/SUcLZ/MNOmZ/VLNWZ/ 1 -
+/wwwroot/addons/tinymce/plugins/tinybrowser/upload.php 1 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td-obj-grid.js 1 -
+/Resources/FLSoriginalGames/FLSoriginalGames/HTML5td/src/td.html 5 http://www.flashlightningstudios.com/webapp01.html
+/apple-touch-icon-precomposed.png 2 -
+/user/ 1 -
+/painel/scripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/wp/wp-includes/wlwmanifest.xml 2 -
+/YRlKZ/RcpRZ/KcVlZ/UXacZ/RQcZZ/ 1 -
+/uploads/3/4/9/3/34932104/4518292_orig.jpg 1 http://go.mail.ru/search_images
+/admin 5 -
+/pc-repair.html 1 -
+/scripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/test/Home.htmlToKdZ/ 1 -
+/Association/wp-content/plugins/simple-forum/editors/tinymce/plugins/tinybrowser/upload.php 1 -
+/test/Home.htmltest/Home.htmlOpnZZ/SUcLZ/MNOmZ/VLNWZ/ 1 -
+/Resources/FLSoriginalGames/MMO/BD/Active/chat.html 7 http://www.google.com/url
+/index.php 1 http://flashlightningstudios.com/index.php
+/Home.html 24 -
+/apple-app-site-association 1 -
+/Resources/FLSoriginalGames/HTML5td/src/js/td.js 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 156
+70.195.3.255 102 305 103806171 20170907002557
+70.195.5.43 52 199 140375491 20170920221621
+70.195.1.61 44 170 11727399 20170925145326
+70.195.14.157 39 94 454033445 20170915004639
+70.195.13.43 31 130 33901874 20170911002732
+12.108.156.250 30 145 31443844 20170927182054
+184.154.139.16 20 40 25425 20170929054546
+70.195.2.103 11 72 300068 20170927050944
+67.212.188.154 9 17 1205 20170925054628
+73.217.236.8 9 46 2290581 20170929181205
+66.249.83.5 2 2 1385 20170920083245
+202.46.53.206 1 1 0 20170923174120
+52.37.72.106 1 1 0 20170907111535
+99.8.211.49 4 23 12559613 20170909224213
+100.35.47.77 8 8 12279 20170928182619
+206.41.167.92 1 1 0 20170919054124
+107.77.85.56 1 2 2221743 20170925113638
+131.161.9.233 1 1 0 20170923002907
+167.114.112.175 2 2 0 20170922141636
+66.249.83.145 1 1 0 20170920021146
+204.44.65.210 2 2 1327 20170929050241
+73.3.46.139 3 22 118823 20170907174311
+66.102.6.145 1 1 0 20170905094538
+63.250.25.59 1 1 0 20170924075906
+149.202.72.198 1 1 0 20170904141647
+188.163.76.62 2 2 0 20170912141105
+81.138.72.149 1 1 0 20170905173527
+64.233.172.129 1 1 2398 20170911145043
+183.87.114.130 1 1 0 20170914113805
+95.37.195.191 1 1 2398 20170911120958
+198.27.85.233 1 1 0 20170907215429
+66.249.80.63 0 1 2221743 
+54.160.122.176 1 1 0 20170905224035
+202.46.52.17 1 1 0 20170927132651
+66.249.80.7 1 1 0 20170923105411
+138.246.253.19 3 3 0 20170927225814
+66.249.83.74 1 1 0 20170927210806
+209.95.182.149 1 1 0 20170930170035
+23.80.97.248 4 22 122181 20170920003859
+103.212.223.146 2 2 1385 20170922172451
+107.77.87.115 5 7 8517805 20170907005035
+74.82.60.40 4 7 19965199 20170904162426
+54.193.39.173 1 1 0 20170904143022
+202.46.58.183 1 1 0 20170920085538
+74.85.208.98 1 1 0 20170903111032
+66.249.80.5 1 1 1385 20170924212024
+164.132.106.162 1 1 0 20170918235646
+202.46.58.198 1 1 0 20170924030215
+202.46.51.191 1 1 1606 20170925145619
+38.100.21.62 6 6 5984 20170911115549
+167.114.55.125 1 1 0 20170909134603
+98.113.33.113 8 43 123566 20170924202926
+202.46.50.80 1 1 1385 20170918122833
+202.46.58.90 1 1 0 20170926211859
+45.63.6.18 3 3 3297 20170904110820
+202.46.49.190 1 1 0 20170924125058
+34.208.173.153 1 1 0 20170908132731
+52.39.61.164 1 1 0 20170907111619
+202.46.48.206 1 1 0 20170922122516
+54.233.201.135 1 1 1385 20170920001055
+64.233.172.131 2 2 0 20170913165207
+206.41.183.42 1 1 0 20170914171309
+52.53.176.23 1 1 0 20170922030030
+70.195.1.209 1 2 1439 20170928082057
+131.161.8.238 1 1 0 20170920000632
+107.77.87.15 1 2 0 20170905193823
+185.86.77.38 1 1 0 20170915121650
+74.82.60.65 3 7 7525308 20170904194128
+202.46.52.159 1 1 0 20170906205556
+107.77.87.84 3 3 2844 20170903005755
+69.58.178.57 6 6 2398 20170914184240
+74.82.60.89 1 1 1367 20170904231530
+107.77.165.10 1 2 1439 20170926110116
+64.233.172.162 1 1 0 20170924194740
+63.250.12.50 1 1 0 20170903215225
+202.46.52.203 1 1 0 20170919040418
+191.96.191.216 1 1 0 20170928070127
+138.197.111.176 4 4 6738 20170921031810
+202.46.51.87 1 1 1439 20170928115903
+66.249.83.3 1 1 0 20170922074300
+173.252.121.119 1 1 0 20170903093628
+66.102.7.227 0 1 9120145 
+35.196.156.160 1 1 2398 20170913122605
+104.238.185.162 4 4 4688 20170904193257
+202.46.52.106 1 1 0 20170916025712
+218.241.108.76 1 1 0 20170930182556
+181.214.169.163 1 1 0 20170911203956
+209.95.162.22 1 1 0 20170924183738
+37.187.78.81 1 1 0 20170910061004
+70.195.5.20 5 5 3791 20170903134357
+34.212.90.219 1 1 1144 20170907111619
+216.218.222.13 1 1 0 20170921163904
+198.240.82.7 1 1 0 20170908173855
+179.61.147.187 1 1 0 20170921092700
+199.30.24.203 0 1 2221743 
+173.236.59.218 7 15 15538 20170920054848
+46.229.170.197 2 2 0 20170924033126
+216.69.191.97 2 2 1385 20170918171315
+173.208.139.226 2 2 0 20170917171349
+138.197.111.21 1 1 0 20170920233511
+88.99.2.222 2 2 0 20170909085616
+185.100.84.108 2 2 2398 20170909005233
+195.22.127.175 1 1 0 20170921215909
+202.46.53.203 1 1 0 20170907173249
+75.229.227.194 4 4 0 20170903001812
+64.233.172.165 1 1 2398 20170906172701
+45.32.130.87 1 1 0 20170930042325
+66.102.7.165 1 1 0 20170920135817
+117.205.16.254 1 2 2221743 20170921201013
+94.23.75.60 1 1 0 20170916174357
+202.46.53.146 1 1 0 20170911025444
+18.220.143.23 1 1 0 20170926215927
+66.249.83.71 1 1 1439 20170926134033
+52.36.125.174 7 7 12911 20170926034326
+35.162.36.240 1 1 0 20170907111615
+63.250.11.5 1 1 0 20170908065837
+202.46.51.182 1 1 0 20170919174728
+202.46.57.175 1 1 0 20170921113749
+158.69.225.35 6 6 2605 20170921054525
+202.46.50.210 1 1 2398 20170907000921
+45.63.98.182 4 4 3291 20170904084552
+54.72.209.70 4 4 2196 20170905025820
+104.238.248.15 2 2 3538 20170912202222
+206.41.164.113 1 1 0 20170919171051
+70.195.12.113 4 22 59384 20170930095919
+144.208.71.16 1 1 0 20170921225410
+202.46.51.116 1 1 1221 20170914220312
+167.114.35.8 1 1 0 20170922184308
+34.211.31.170 1 1 0 20170914170335
+107.77.85.86 5 24 0 20170923222535
+54.94.165.215 1 1 0 20170919192221
+104.130.124.209 6 6 3420 20170908043430
+188.226.129.55 1 1 0 20170926025622
+104.192.74.42 6 6 0 20170910163552
+174.81.144.15 4 22 0 20170919230938
+198.240.79.23 1 1 0 20170914063706
+107.77.89.86 1 3 12455295 20170909224357
+66.70.148.40 1 1 2398 20170907085916
+66.102.7.169 2 2 0 20170919134326
+198.96.155.3 2 2 0 20170920200927
+131.161.8.208 1 1 0 20170920203200
+202.46.55.195 1 1 0 20170911191900
+52.70.48.63 1 1 1099 20170904143003
+202.46.51.206 1 1 0 20170907170618
+184.154.164.186 8 16 11251 20170930055110
+66.102.7.167 1 1 0 20170917222844
+202.46.51.28 1 1 1385 20170924030214
+178.137.82.201 1 1 0 20170928194015
+184.154.76.18 6 12 38684 20170922054937
+176.31.180.157 1 1 1439 20170925003247
+154.16.122.80 1 1 0 20170914094357
+64.134.66.25 8 27 2353410 20170919210239
+76.2.162.93 1 1 0 20170903100138
+75.221.94.140 5 23 105620 20170916210044
+202.46.55.18 1 1 0 20170928115904
+107.77.165.7 3 5 65596030 20170925142308
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 29
+20170902 7 7 6629 1
+20170903 29 30 2817436 11
+20170904 44 60 60969947 15
+20170905 33 133 33866641 9
+20170906 41 140 42783780 8
+20170907 52 137 33317422 19
+20170908 24 85 5818 9
+20170909 12 35 25017306 7
+20170910 11 31 133409 4
+20170911 17 38 12584898 8
+20170912 5 7 19076 4
+20170913 10 33 21067749 4
+20170914 42 99 388613306 11
+20170915 21 59 65601287 5
+20170916 23 62 65545922 8
+20170917 15 36 131223227 5
+20170918 31 106 9176098 9
+20170919 28 103 2472843 12
+20170920 18 40 6794313 14
+20170921 21 42 4575010 10
+20170922 9 11 7547 7
+20170923 18 75 2229814 8
+20170924 45 119 7155467 12
+20170925 12 52 4577643 7
+20170926 14 17 15789 7
+20170927 18 97 2642882 5
+20170928 15 18 15157 7
+20170929 8 28 2289510 3
+20170930 9 29 65821 5
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 6
+5mn-15mn 5
+0s-30s 203
+15mn-30mn 8
+30s-2mn 3
+2mn-5mn 3
+30mn-1h 6
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 12
+/ 280 145399 209 137
+/webapp01.html 95 61271 10 16
+/games.html 80 109139 7 7
+/Resources/FLSoriginalGames/HTML5td/src/td.html 47 41810 2 28
+/contact.html 39 32372 4 10
+/Resources/FLSoriginalGames/HavokTD/src/td.html 38 40166 0 27
+/videos.html 30 23673 2 4
+/stats/awstats/cgi-bin/awstats.pl 9 303581 0 2
+/Resources/SiteImages/Usable/Video2.mp4 5 261761208 0 2
+/Resources/SiteImages/Usable/Video1.mp4 4 378820605 0 1
+/stats/ 2 536 0 0
+/webapp02.html 3 4340 0 0
+END_SIDER

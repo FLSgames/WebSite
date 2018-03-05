@@ -1,0 +1,514 @@
+AWSTATS DATA FILE 6.9 (build 1.925)
+# If you remove this file, all statistics for date 201801 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1864                
+POS_TIME 2549                
+POS_VISITOR 10423               
+POS_DAY 14362               
+POS_DOMAIN 3284                
+POS_LOGIN 3515                
+POS_ROBOT 3717                
+POS_WORMS 4133                
+POS_EMAILSENDER 4264                
+POS_EMAILRECEIVER 4407                
+POS_SESSION 15096               
+POS_SIDER 15283               
+POS_FILETYPES 4542                
+POS_OS 4695                
+POS_BROWSER 4836                
+POS_SCREENSIZE 5113                
+POS_UNKNOWNREFERER 5187                
+POS_UNKNOWNREFERERBROWSER 5917                
+POS_ORIGIN 6156                
+POS_SEREFERRALS 6298                
+POS_PAGEREFS 6467                
+POS_SEARCHWORDS 6778                
+POS_KEYWORDS 6951                
+POS_MISC 2213                
+POS_ERRORS 7033                
+POS_CLUSTER 3371                
+POS_SIDER_404 7154                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180201001000 1687 323116 32881740482
+FirstTime 20180101001327
+LastTime 20180131221953
+LastUpdate 20180201021746 1687 1578 108 0 0
+TotalVisits 187                 
+TotalUnique 103                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 106                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 15 35 6795303 34 34 22618
+1 29 47 2372433 12 14 12359
+2 16 16 5756 27 29 24718
+3 15 15 7195 25 26 18166
+4 6 6 4317 14 17 14527
+5 60 116 123742 288 641 2463016
+6 6 10 15752 28 53 229440
+7 5 7 2766 42 75 2404756
+8 3 3 1439 11 11 4368
+9 4 4 0 16 16 12885
+10 5 6 2224486 11 11 6899
+11 1 2 2223182 18 19 13618
+12 4 4 0 11 13 9828
+13 4 5 2221743 12 13 13647
+14 14 15 2227387 26 27 22855
+15 5 5 0 11 12 7772
+16 3 3 0 10 10 5807
+17 13 15 2237532 31 31 25463
+18 3 3 0 17 17 14145
+19 9 9 4317 16 17 16727
+20 29 70 370938 40 44 39552
+21 12 12 8674 26 26 19656
+22 16 17 2221743 20 21 14196
+23 17 34 142818 24 24 21442
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 294 459 23211523
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 1
+flashlightningstudio 1 41 15807 20180114203323
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 8
+spider 577 2578348 20180131054759 0
+bot[+:,\.\;\/\\-] 99 19869 20180131135450 0
+crawl 47 2355613 20180129092433 0
+googlebot 22 8634 20180131100132 0
+no_user_agent 21 15829 20180131235625 0
+mj12bot 21 15789 20180131020421 0
+python 2 0 20180125003209 0
+mail\.ru 1 1439 20180128232730 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 6
+css 35 28920 0 0
+png 50 22232822 0 0
+html 282 184693 0 0
+js 79 415566 0 0
+pl 12 349375 0 0
+gif 1 147 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 10
+winxp 6
+winlong 7
+win2000 1
+winnt 144
+winvista 5
+linux 36
+macosx 46
+win2003 7
+Unknown 58
+win2008 149
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 18
+msie6.0 1
+firefox50.0 1
+firefox57.0 3
+firefox48.0 2
+firefox17.0 1
+chrome 240
+firefox26.0 6
+firefox34.0 1
+firefox7.0.1 4
+firefox3.0.3 2
+msie8.0 2
+mozilla 19
+netscape5.0 9
+msie7.0 7
+msie9.0 123
+Unknown 34
+firefox35.0 2
+safari 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 9
+Mozilla/5.0_zgrab/0.x_(compatible;_Researchscan/t13l;__http://researchscan.comsys.rwth-aachen.de) 20180128154436
+SafeDNSBot_(https://www.safedns.com/searchbot) 20180131214154
+Mozilla/5.0_zgrab/0.x_(compatible;_Researchscan/t12l;__http://researchscan.comsys.rwth-aachen.de) 20180129010558
+Mozilla/5.0_zgrab/0.x 20180115213431
+Mozilla/5.0_zgrab/0.x_--_We_are_scanning_for_research,_further_information_at_http://researchscan.comsys.rwth-aachen.de/_-- 20180122031115
+Mozilla/5.0_(compatible;_Dataprovider.com;) 20180126224606
+Magic_Browser 20180131210032
+Mozilla/5.0_(compatible;_ips-agent) 20180115172337
+Mozilla/5.0_Firefox/35.0 20180113044326
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 3
+SafeDNSBot_(https://www.safedns.com/searchbot) 20180131214154
+node-urllib/2.25.3_Node.js/6.12.2_(Linux_4.4;_x64) 20180116231842
+Magic_Browser 20180131210032
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 154 156
+From1 2 2
+From2 77 139
+From3 16 16
+From4 45 146
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google 76 138
+yandex 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 5
+http://www.flsgames.com 6 6
+http://burger-imperia.com 4 4
+http://flashlightningstudios.com.seocheckupx.net 3 3
+http://flsgames.com 2 2
+http://pizza-tycoon.com 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 1
+dictionary+english 8
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 2
+dictionary 8
+english 8
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+403 1 239
+302 2 480
+406 4 1052
+404 404 441168
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 82
+/nVZYT/pKcSP/LfhUL/kWkUm/ 1 -
+/sitemap.xml 1 -
+/upload/_dispatch.php 1 -
+/LfhUL/kWkUm/ 1 -
+/age-checker.html 1 -
+/robots.txt 119 -
+/wordpress/ 5 -
+/knXMm/NaXTn/ 1 -
+/gdOUN/YXYTU/MOiQN/ 1 -
+/KYVXm/aNWVL/YXYTU/MOiQN/ 1 -
+/.ftpconfig 3 -
+/viewer/viewer.css 4 http://m.flashlightningstudios.com/videos1
+/wp-feed.php 1 -
+/Resources/FLSoriginalGames/MMO/BD/Active/Home.html 31 http://www.google.com/url
+/wp-content/themes/headway-162/style.css 1 http://flashlightningstudios.com/wp-content/themes/headway-162/style.css
+/joomla/robots.txt 1 -
+/temp.php 1 -
+/xmlrpc.php 5 -
+/plugins/community/uploadify/uploadify.css 2 -
+/upload/server/php/ 1 http://flashlightningstudios.com/upload/server/php/
+/modules/mod_feed/tmpl/mod_feed.php 2 -
+/KlfhsYYs 1 -
+/th1s_1s_a_4o4.html 31 http://www.google.com/url
+/bitrix/admin/index.php 1 -
+/gXMZb/bYUYk/ 1 -
+/kWkUm/ 2 -
+/NkXOd/knXMm/NaXTn/ 1 -
+/cache.php 1 -
+/user/register 2 -
+/cache/cachee.php 1 -
+/wp-content/plugins/smart-videos/js/video.js 1 -
+/backups.php 1 -
+/aYjRh/gniNa/pKcSP/LfhUL/kWkUm/ 1 -
+/lieats.php 1 -
+/uploads/3/4/9/3/34932104/4839778.png 7 -
+/videos1 4 -
+/joomla/administrator/index.php 1 -
+/wp-login.php 6 -
+/LICENSE.php 1 -
+/phpinfo.php 2 -
+/wp-content/plugins/gravityforms/ 1 http://flashlightningstudios.com/wp-content/plugins/gravityforms/
+/cgi-bin/php.cgi 6 -
+/dLXNd/QKSXm/KPlVL/NkXOd/knXMm/NaXTn/ 1 -
+/cgi-bin/php 5 -
+/NaXTn/ 1 -
+/Resources/FLSoriginalGames//MMO/BD/Active/chat.html 2 http://flashlightningstudios.com/webapp02.html
+/cgi-bin/php5 6 -
+/wp-content/plugins/awesome-support/plugins/jquery.fineuploader-3.5.0/server/php/example.php 1 http://flashlightningstudios.com/wp-content/plugins/awesome-support/plugins/jquery.fineuploader-3.5.0/server/php/example.php
+/cgi-bin/php4 6 -
+/wp-content/themes/ThisWay/includes/uploadify/upload_settings_image.php 1 http://flashlightningstudios.com/wp-content/themes/ThisWay/includes/uploadify/upload_settings_image.php
+/OffYa/ 1 -
+/blog/ 8 http://flsgames.com/blog/
+/images/defau1t.php 1 -
+/WPKPR/jMiKO/ 1 -
+/jYgLj/ 1 -
+/wp/ 5 -
+/wp-load.php 1 -
+/media/media.php 1 -
+/cgi-bin/php-cgi 6 -
+/YXYTU/MOiQN/ 2 -
+/ads.txt 1 -
+/blog/administrator/index.php 1 -
+/1.php 1 -
+/wp-content/plugins/mm-forms-community/includes/doajaxfileupload.php 2 http://flashlightningstudios.com/wp-content/plugins/mm-forms-community/includes/doajaxfileupload.php
+/blog/robots.txt 6 -
+/viewer/viewer.js 4 http://m.flashlightningstudios.com/videos1
+/yt.php 1 -
+/TMLXR/robots.txt 1 -
+/wp-content/themes/headway-165/style.css 1 http://flashlightningstudios.com/wp-content/themes/headway-165/style.css
+/server/php/ 1 http://flashlightningstudios.com/server/php/
+/wp-rdf.php 1 -
+/administrator/index.php 1 -
+/TcZWK/gdOUN/YXYTU/MOiQN/ 2 -
+/wp-register.php 1 -
+/MOiQN/ 1 -
+/ngVQo/ 1 -
+/cod.php 1 -
+/Resources/FLSoriginalGames/MMO/BD/Active/chat.html 31 -
+/index.php 5 http://flashlightningstudios.com/index.php
+/MagOn/ 1 http://yandex.ru/clck/jsredir
+/Home.html 31 -
+/.vscode/ftp-sync.json 2 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 106
+70.195.11.191 27 104 2844835 20180114231958
+184.154.139.16 16 32 19311 20180129071258
+67.212.188.154 15 31 38622 20180128054711
+13.56.229.65 15 15 4317 20180130151550
+184.154.164.186 14 28 33624 20180131054754
+54.183.130.127 9 9 12951 20180129212721
+173.236.59.218 8 16 19311 20180130054550
+35.162.141.144 8 8 5756 20180126025308
+184.154.76.18 8 16 25748 20180126054724
+104.192.74.17 7 7 12911 20180123231127
+120.35.38.183 1 1 0 20180113121122
+66.102.6.127 1 1 0 20180103225243
+216.13.106.243 2 2 1327 20180131072936
+209.99.130.124 1 1 1439 20180118031800
+51.15.209.146 1 1 0 20180130094313
+34.235.233.220 2 2 0 20180112224719
+34.211.36.144 1 1 0 20180116231842
+34.216.220.140 1 1 0 20180111014754
+35.162.70.167 5 5 1439 20180131210032
+185.170.42.18 1 1 1439 20180106231039
+216.74.77.15 1 1 0 20180131085720
+34.240.224.245 1 1 0 20180103142800
+216.19.222.136 1 1 0 20180110035531
+88.99.99.145 2 2 1439 20180109051259
+124.124.14.93 1 1 1439 20180130175725
+52.41.211.72 3 3 0 20180129203912
+70.195.14.179 7 26 4573263 20180103221621
+213.183.51.182 1 1 0 20180102184129
+167.114.174.95 7 7 0 20180126224606
+197.255.127.231 1 2 2221743 20180119104158
+54.191.239.216 1 1 1439 20180111025108
+109.63.165.134 1 2 2221743 20180106132258
+178.137.88.27 1 1 0 20180126091229
+185.220.101.29 1 1 0 20180112201416
+70.195.38.109 0 1 2221743 
+103.14.27.134 1 1 0 20180120021436
+103.208.246.230 3 3 2743 20180116104000
+178.171.31.211 1 1 0 20180123215045
+34.209.212.48 1 1 0 20180111164906
+46.229.170.197 2 2 0 20180126081830
+94.23.83.80 1 1 0 20180118155127
+137.226.113.28 3 3 2878 20180115213431
+65.19.167.132 1 1 0 20180112223128
+64.233.172.139 2 2 0 20180119013751
+54.215.229.71 2 2 0 20180127204727
+64.233.172.137 1 1 0 20180120020850
+95.85.22.83 2 2 0 20180103092909
+178.33.39.197 2 2 0 20180125001843
+149.154.67.77 1 1 0 20180123194500
+54.84.155.162 1 1 0 20180111134807
+188.166.73.187 1 1 0 20180131175055
+216.218.222.12 1 1 0 20180102042954
+64.233.172.165 3 3 1439 20180124141324
+52.37.211.217 6 6 4317 20180118015632
+46.183.144.22 1 1 0 20180117133023
+64.233.172.191 1 1 0 20180114150937
+109.201.133.100 1 1 0 20180107014906
+137.226.113.26 5 5 1439 20180129010558
+51.15.63.43 2 2 2878 20180109012233
+35.166.11.8 1 1 0 20180119102539
+181.214.183.47 1 1 0 20180104123011
+66.249.80.5 1 1 0 20180121140848
+66.102.6.197 1 1 0 20180101015413
+137.226.113.27 1 1 0 20180122031115
+188.165.26.121 1 1 0 20180131202026
+222.184.179.70 1 1 0 20180129224354
+217.147.169.217 1 1 0 20180115154125
+54.232.251.180 1 1 0 20180113033832
+216.74.107.129 1 1 0 20180113022909
+91.210.145.154 3 3 4317 20180128042251
+185.220.101.13 1 1 0 20180112223203
+104.238.248.15 2 2 0 20180127212330
+65.55.210.23 0 1 2221743 
+124.206.180.188 2 2 0 20180113044326
+35.162.214.175 2 2 1439 20180105030849
+80.87.198.240 1 1 0 20180123004720
+46.42.48.132 1 2 2221743 20180105171523
+52.34.24.33 3 3 0 20180130213236
+188.226.129.55 1 1 0 20180114022713
+91.210.147.184 1 1 0 20180110024520
+67.170.55.107 1 1 0 20180115051745
+38.145.72.212 1 1 0 20180131221953
+23.89.115.83 1 1 0 20180125185948
+146.185.144.64 1 1 0 20180122122442
+188.166.63.142 3 3 7235 20180131214154
+185.117.215.9 1 1 0 20180112201420
+51.254.142.83 2 2 0 20180111195214
+52.209.107.45 4 4 1327 20180103142638
+52.91.57.190 1 1 0 20180129053233
+38.100.21.61 7 7 11472 20180112011701
+199.30.24.48 0 1 2221743 
+91.210.147.35 4 4 4317 20180121203358
+13.229.128.216 1 1 0 20180113033157
+41.35.28.180 1 2 2221743 20180114003617
+69.58.178.57 7 7 11472 20180115172337
+64.233.172.183 1 1 0 20180105203246
+181.214.4.211 1 1 0 20180124232605
+176.116.8.191 1 1 0 20180104132537
+74.85.220.171 1 1 0 20180127024027
+54.200.108.160 1 1 0 20180106031409
+64.233.172.135 2 2 0 20180126214210
+64.233.172.162 4 4 0 20180129163855
+209.99.140.84 1 1 0 20180122040737
+54.213.220.204 1 1 0 20180105202711
+77.222.117.6 1 1 1439 20180125071102
+51.15.95.136 1 1 0 20180128032820
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20180101 6 8 7876 5
+20180102 13 33 2359396 6
+20180103 14 17 2230946 8
+20180104 5 7 1439 4
+20180105 9 12 2231058 7
+20180106 7 10 2223182 6
+20180107 5 7 9315 4
+20180108 4 6 6437 3
+20180109 7 9 10754 5
+20180110 5 7 9315 4
+20180111 7 9 7876 7
+20180112 16 18 20787 9
+20180113 9 11 7876 8
+20180114 33 112 5073015 8
+20180115 15 19 2234654 8
+20180116 6 8 2743 3
+20180117 3 5 6437 2
+20180118 7 9 9315 5
+20180119 6 9 2229619 5
+20180120 8 10 1439 7
+20180121 10 14 4450681 6
+20180122 10 12 7876 8
+20180123 14 16 14350 7
+20180124 8 10 7876 6
+20180125 8 10 9315 6
+20180126 17 19 9315 9
+20180127 7 9 6437 5
+20180128 9 11 4317 6
+20180129 8 10 1439 7
+20180130 6 8 1439 5
+20180131 12 14 14999 8
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 5
+1h+ 1
+5mn-15mn 1
+15mn-30mn 1
+30s-2mn 2
+0s-30s 182
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 9
+/ 205 66194 185 144
+/Resources/FLSoriginalGames/HavokTD/src/td.html 35 56150 1 32
+/stats/awstats/cgi-bin/awstats.pl 12 349375 0 1
+/webapp01.html 11 11242 0 3
+/games.html 9 30464 0 0
+/contact.html 8 6635 0 3
+/videos.html 7 6520 0 1
+/webapp02.html 6 7220 1 3
+/stats/ 1 268 0 0
+END_SIDER
