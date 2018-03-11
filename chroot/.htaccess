@@ -1,0 +1,30 @@
+# Begin cache control #
+ExpiresActive on
+<FilesMatch "\.(css|png|bmp|ico|gff|js|jpg|jpeg|gif|gcf)$">
+FileETag MTime Size
+ExpiresDefault "now plus 240 minutes"
+</FilesMatch>
+
+ExpiresDefault "now plus 60 minutes"
+ExpiresByType text/html "now plus 60 minutes"
+<FilesMatch "\.(htm|html)$">
+FileETag MTime Size
+ExpiresDefault "now plus 60 minutes"
+</FilesMatch>
+
+
+# End cache control #
+DirectoryIndex index.html
+
+
+ErrorDocument 404 /errorpages/404.html
+
+
+AddType application/x-shockwave-flash swf
+AddType application/zip .zip
+AddType image/gif .gif .GIF
+AddType image/jpeg .jpeg .jpg .jpe .JPG
+AddType image/x-icon .ico
+AddType text/html .html .htm
+AddType text/plain .txt
+AddType text/richtext .rtx

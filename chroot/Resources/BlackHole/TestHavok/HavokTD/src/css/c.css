@@ -1,0 +1,61 @@
+/*
+ * ____ ____ ____ ____ ____ ____ ____ ____ 
+ *||F |||L |||S |||G |||A |||M |||E |||S ||
+ *||__|||__|||__|||__|||__|||__|||__|||__||
+ *|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|Copyright (c) 2017.
+ * 
+ *
+ * Author: FLS <DanielH@FlashLightningstudios.com>
+ * Website: http://www.FLSgames.com
+ *
+ * Latest Update: 09/18/2017
+ *
+ */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: Verdana, "Times New Roman", serif;
+    background: #000000;
+}
+h1 {
+    padding:0px;
+    margin: 0px;
+    line-height: 30px;
+    font-size: 29px;
+    font-weight: bold;
+    font-family: Verdana, "Times New Roman", serif;
+    letter-spacing: 0.12em;
+}
+#wrapper {
+    margin: 0 auto;
+}
+#td-wrapper {
+    padding: 4px 0px 0px 0px;
+    background: #000000;
+}
+#td-board {
+    display: none;
+    font-size: 16px;
+}
+#td-board canvas#td-canvas {
+    position: relative;
+    background: #fff;
+    border: solid 1px #99ff66;
+}
+#td-loading {
+    font-size: 18px;
+    line-height: 48px;
+    padding: 60px 0 120px 0;
+    font-style: italic;
+}
+#about {
+    color: #fff;
+    padding: 0px 0px;
+}
+#about a {
+    color: #fff;
+}
